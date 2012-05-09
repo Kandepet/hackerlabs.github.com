@@ -2,28 +2,58 @@
 layout: default
 ---
 
-<div class="blog-index">
-  {% assign index = true %}
-  {% for post in paginator.posts %}
-  {% assign content = post.content %}
-    <article>
-      {% include article.html %}
-    </article>
-  {% endfor %}
-  <div class="pagination">
-    {% if paginator.next_page %}
-      <a class="prev" href="{{paginator.next_page}}">&larr; Older</a>
-    {% endif %}
-    <a href="/blog/archives">Blog Archives</a>
-    {% if paginator.previous_page %}
-    <a class="next" href="{{paginator.previous_page}}">Newer &rarr;</a>
-    {% endif %}
-  </div>
-</div>
-<aside class="sidebar">
-  {% if site.blog_index_asides.size %}
-    {% include_array blog_index_asides %}
-  {% else %}
-    {% include_array default_asides %}
-  {% endif %}
-</aside>
+
+{% assign index = true %}
+
+<article style="border-left: 10px solid #C0143C; padding: 3em 50px">
+<h2> Welcome to {{site.title}}.  </h2>
+<p>{{site.description}}<p>
+
+<a class="continue" href="/about/">More →</a>
+</article>
+
+<article id="post-0" style="padding: 0px 50px">
+<h2>BLOG POSTS</h2>
+</article>
+
+<frontpage-list id="post-0" style="padding: 0px 50px">
+<ul class="frontpage-blog-list">
+    {% for post in site.posts %}
+    <a href="{{post.url}}" rel="post" title="{{post.title}}" class="frontpage-blog-link" ><li class="Internals-category Search-category "><span class="frontpage-date">{{post.date | date: "%d/%b/%Y"}}</span>{{post.title}}</li> </a>
+    {% endfor %}
+</ul>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</frontpage-list><!-- #post-0 -->
+
+
+

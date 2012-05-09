@@ -1,63 +1,72 @@
+$link-color: blue;
+$noise-bg: none;
+
 .highlight, html .gist .gist-file .gist-syntax .gist-highlight {
+  font-size: 13px!important;
   table td.code { width: 100%; }
   .line-numbers {
     text-align: right;
     font-size: 13px;
     line-height: 1.45em;
     @if $solarized == light {
-      background: lighten($base03, 1) $noise-bg !important;
-      border-right: 1px solid darken($base02, 2) !important;
-      @include box-shadow(lighten($base03, 2) -1px 0 inset);
-      text-shadow: lighten($base02, 2) 0 -1px;
+      //background: lighten($base03, 1) $noise-bg !important;
+      //border-right: 1px solid darken($base02, 2) !important;
+      border-right: 1px solid #e9e9e9 !important;
+      //@include box-shadow(lighten($base03, 2) -1px 0 inset);
+      //text-shadow: lighten($base02, 2) 0 -1px;
     } @else {
       background: $base02 $noise-bg !important;
       border-right: 1px solid darken($base03, 2) !important;
-      @include box-shadow(lighten($base02, 2) -1px 0 inset);
+      //@include box-shadow(lighten($base02, 2) -1px 0 inset);
       text-shadow: darken($base02, 10) 0 -1px;
     }
-    span { color: $base01 !important; }
+    span { font-weight: normal !important; color: $base01 !important; }
     padding: .8em !important;
-    @include border-radius(0);
+    //@include border-radius(0);
   }
-  border: 1px solid $pre-border !important;
+  font-size: 13px!important;
+  padding: 0px!important;
+  //border: 1px solid $pre-border !important;
 }
 figure.code, .gist-file, pre {
-  @include box-shadow(rgba(#000, .06) 0 0 10px);
-  .highlight pre { @include box-shadow(none); }
+  //@include box-shadow(rgba(#000, .06) 0 0 10px);
+  //.highlight pre { @include box-shadow(none); }
 }
 
 html .gist .gist-file {
   margin-bottom: 1.8em;
   position: relative;
   border: none;
-  padding-top: image-height("code_bg.png") !important;
+  //padding-top: image-height("code_bg.png") !important;
   .gist-syntax {
     border-bottom: 0 !important;
     background: none !important;
     .gist-highlight{
       background: $base03 !important;
+      padding-top: 30px!important;
       pre {
         @extend .pre-code;
       }
     }
   }
   .gist-meta {
-   padding: .6em 0.8em;
-   border: 1px solid lighten($base02, 2) !important;
+   //padding: .6em 0.8em;
+   border: 0px solid lighten($base02, 2) !important;
    color: $base01;
-   font-size: .7em !important;
+   //font-size: .7em !important;
    @if $solarized == light {
      background: lighten($base03, 2) $noise-bg;
-     border: 1px solid $pre-border !important;
-     border-top: 1px solid lighten($base03, 2) !important;
+     border-left: 0px solid $pre-border !important;
+     border-top: 0px solid lighten($base03, 2) !important;
+     border-bottom: 0px solid lighten($base03, 2) !important;
    } @else {
      background: $base02 $noise-bg;
    }
    @extend .sans;
-   line-height: 1.5em;
+   //line-height: 1.5em;
     a {
       color: mix($base1, $base01) !important;
-      @include hover-link;
+      //@include hover-link;
       &:hover { color: $base1 !important; }
     }
     a[href*='#file'] {
@@ -74,8 +83,8 @@ html .gist .gist-file {
 }
 pre {
   background: $pre-bg $noise-bg;
-  @include border-radius(.4em);
-  @extend .mono;
+  //@include border-radius(.4em);
+  //@extend .mono;
   border: 1px solid $pre-border;
   line-height: 1.45em;
   font-size: 13px;
@@ -86,12 +95,12 @@ pre {
 }
 h3.filename {
   @extend .code-title;
-  + pre { @include border-top-radius(0px); }
+  + pre { /*@include border-top-radius(0px);*/ }
 }
 
 p, li {
   code {
-    @extend .mono;
+    //@extend .mono;
     display: inline-block;
     white-space: no-wrap;
     background: #fff;
@@ -99,7 +108,7 @@ p, li {
     line-height: 1.5em;
     color: #555;
     border: 1px solid #ddd;
-    @include border-radius(.4em);
+    //@include border-radius(.4em);
     padding: 0 .3em;
     margin: -1px 0;
   }
@@ -107,8 +116,8 @@ p, li {
 }
 
 .pre-code {
-  @include selection(adjust-color($base03, $lightness: 23%, $saturation: -65%), $text-shadow: $base03 0 1px);
-  font-family: $mono !important;
+  //@include selection(adjust-color($base03, $lightness: 23%, $saturation: -65%), $text-shadow: $base03 0 1px);
+  //font-family: $mono !important;
   overflow: scroll;
   overflow-y: hidden;
   display: block;
@@ -187,7 +196,7 @@ p, li {
 }
 
 .highlight, .gist-highlight {
-  pre { background: none; @include border-radius(none); border: none; padding: 0; margin-bottom: 0; }
+  pre { background: none; /*@include border-radius(none);*/ border: none; padding: 0; margin-bottom: 0; }
   margin-bottom: 1.8em;
   background: $base03;
   overflow-y: hidden;
@@ -224,30 +233,34 @@ figure.code {
 }
 
 .code-title {
-  text-align: center;
+  //text-align: center;
+  text-align: left;
   font-size: 13px;
   line-height: 2em;
-  text-shadow: #cbcccc 0 1px 0;
-  color: #474747;
+  //text-shadow: #cbcccc 0 1px 0;
+  //color: #474747;
   font-weight: normal;
   margin-bottom: 0;
-  @include border-top-radius(5px);
+  //@include border-top-radius(5px);
   font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
-  background: #aaaaaa image-url("code_bg.png") top repeat-x;
-  border: 1px solid #565656;
-  border-top-color: #cbcbcb;
-  border-left-color: #a5a5a5;
-  border-right-color: #a5a5a5;
-  border-bottom: 0;
+  //background: #aaaaaa image-url("code_bg.png") top repeat-x;
+  //border: 1px solid #565656;
+  //border-top-color: #cbcbcb;
+  //border-left-color: #a5a5a5;
+  //border-right-color: #a5a5a5;
+  border-bottom: 1px solid #a9a9a9;
 }
 
 .download-source {
   position: absolute; right: .8em;
-  @include hover-link;
+  //@include hover-link;
   color: #666 !important;
   z-index: 1;
   font-size: 13px;
-  text-shadow: #cbcccc 0 1px 0;
+  //text-shadow: #cbcccc 0 1px 0;
   padding-left: 3em;
+  text-decoration: none;
+  font-style: italic;
+  border-bottom: 0px solid #a9a9a9!important;
 }
 

@@ -1,10 +1,1139 @@
-@import "compass";
-@include global-reset;
-@include reset-html5;
+/*
+	Theme Name: Svbtle
+	Theme URI: http://gravityonmars.com/notepad/
+	Author: Ricardo Rauch
+	Author URI: http://gravityonmars.com/
+	Version: 1.0
+	License: GNU General Public License v2.0
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+$noise-bg: image-url('noise.png') top left !default;
 
 @import "custom/colors";
-@import "custom/fonts";
-@import "custom/layout";
-@import "base";
-@import "partials";
-@import "custom/styles";
+//@import "partials";
+@import "partials/syntax";
+
+@font-face {
+    font-family: 'Lato';
+    src: url(http://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cardo';
+    src: url(http://fonts.googleapis.com/css?family=Cardo:400,700,400italic);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arvo';
+    src: url(http://fonts.googleapis.com/css?family=Arvo:regular,italic,bold,bolditalic);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('http://fonts.googleapis.com/css?family=PT Sans:regular,italic,bold,bolditalic');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/** START HTML5 Boilerplate CSS **/
+
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ==========================================================
+ */
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+audio:not([controls]), [hidden] {
+  display: none; }
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: sans-serif;
+  color: #222; }
+
+button, input, select, textarea {
+  font-family: sans-serif;
+  color: #222; }
+
+body {
+  font: 300 26px / 36px "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a {
+  color: #00e;
+  &:visited {
+    color: #551a8b; }
+  &:hover {
+    color: #06e; }
+  &:focus {
+    outline: thin dotted; }
+  &:hover, &:active {
+    outline: 0; } }
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+blockquote {
+  margin: 1em 40px; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+/* Redeclare monospace font family: h5bp.com/j */
+
+pre, code, kbd, samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: none;
+  &:before, &:after {
+    content: "";
+    content: none; } }
+
+small {
+  font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol {
+  margin: 1em 0;
+  padding: 0 0 0 40px; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+nav {
+  ul, ol {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0; } }
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440
+ */
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle; }
+
+/*
+ * Correct overflow not hidden in IE9
+ */
+
+svg:not(:root) {
+  overflow: hidden; }
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure, form {
+  margin: 0; }
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+
+label {
+  cursor: pointer; }
+
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+
+legend {
+  border: 0;
+  *margin-left: -7px;
+  padding: 0;
+  white-space: normal; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+
+button, input {
+  line-height: normal; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+
+button {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible; }
+
+input {
+  &[type="button"], &[type="reset"], &[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+    *overflow: visible; } }
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled] {
+  cursor: default; }
+
+input {
+  &[disabled] {
+    cursor: default; }
+  &[type="checkbox"], &[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+    *width: 13px;
+    *height: 13px; }
+  &[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    } }
+
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
+
+/* Colors for form validity */
+
+input:valid, textarea:valid {}
+
+input:invalid, textarea:invalid {
+  background-color: #f0dddd; }
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td {
+  vertical-align: top; }
+
+/* =============================================================================
+   Chrome Frame Prompt
+   ========================================================================== */
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: black;
+  padding: 0.2em 0; }
+
+/* ==|== primary styles =====================================================
+   Author: Ricardo Rauch
+   ========================================================================== */
+
+html {
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  font-size: 92%;
+  color: #4D4D4D; }
+
+a {
+  color: black;
+  text-decoration: none;
+  &:visited {
+    color: black;
+    text-decoration: none; }
+  &:hover {
+    color: #0184ca; } }
+
+#wrap {
+  border-right: 1px solid #e2e2e2; }
+
+header {
+  float: left;
+  padding: 2em;
+  position: fixed;
+  color: #999;
+  text-transform: uppercase;
+  h1 a {
+    font: 300 26px / 36px "Arvo", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: black; } }
+
+h1, h2, h3, h4, h5 {
+  font: 300 26px / 36px "Arvo", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: black; }
+
+#content {
+  margin-left: 250px;
+  border-left: 1px solid #e2e2e2; }
+
+article {
+  border-bottom: 1px solid #e2e2e2;
+  .entry-title, .entry-content, .entry-meta {
+    padding: 3em 50px; }
+  .entry-title {
+    margin-top: 0;
+    font-size: 2.3em;
+    padding-top: 1em;
+    padding-bottom: 0em;
+    h2 {
+      margin: 0;
+      padding: 0; }
+    a {
+      display: inline-block;
+      &:hover {
+        color: #0184ca; } } }
+  .frontpage-title {
+    padding: 3em 50px;
+    margin-top: 0;
+    font-size: 1.3em;
+    padding-top: 1em;
+    padding-bottom: 0em; }
+  .entry-meta {
+    border-bottom: 1px solid #e2e2e2;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    font-size: .9em; } }
+
+/*article .entry-title a.link { border-bottom: 1px solid #ccc; } */
+
+body #content article {
+  .entry-meta {
+    display: none; }
+  &:first-child .entry-meta {
+    display: block; } }
+
+article .entry-content {
+  padding-top: 0em;
+  p {
+    line-height: 1.9em; }
+  a {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px; }
+  blockquote {
+    border-left: 8px solid #0084ca;
+    margin-left: 0;
+    padding-left: 1.4em; }
+  img {
+    max-width: 100%;
+    width: auto;
+    height: auto; } }
+
+frontpage-list {
+  ul {
+    list-style-position: outside;
+    list-style-type: none;
+    padding: 0 0;
+    margin: 0 0; }
+  .frontpage-date {
+    margin: 1em 0;
+    display: inline-block;
+    background: black;
+    color: #FFFFFF;
+    clear: both;
+    border: 2px solid #000;
+    border-radius: 100px;
+    padding: .4em 1em;
+    margin-right: 10px;
+    &:hover {
+      /*border-color: #0184ca;*/ } }
+  .frontpage-blog-list li {
+    padding: 0 50px; }
+  .frontpage-blog-link {
+    background: inherit;
+    color: inherit;
+    &:hover {
+      background: inherit;
+      color: inherit; } }
+  .Internals-category {
+    border-right: 10px #556270 solid;
+    &:hover {
+      color: #fff;
+      background: #556270; } }
+  .Information-category {
+    border-right: 10px #88ACDB solid;
+    &:hover {
+      color: #fff;
+      background: #88ACDB; } }
+  .Hobby-category {
+    border-right: 10px #F25A5A solid;
+    &:hover {
+      color: #fff;
+      background: #F25A5A; } }
+  .Programming-category {
+    border-right: 10px #76629A solid;
+    &:hover {
+      color: #fff;
+      background: #76629A; } } }
+
+/*frontpage-list .frontpage-blog-list li:hover {background: #0184CA; color: #FFF; }*/
+
+article a.continue {
+  background-color: #000000;
+  border-radius: 5px 5px 5px 5px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 17px;
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  text-transform: uppercase; }
+
+.header-logo {
+  bottom: 100px;
+  position: fixed;
+  width: 200px;
+  p {
+    color: #4D4D4D;
+    text-transform: none;
+    font-size: 16px;
+    font-weight: 400; } }
+
+figure#user_logo {
+  border: 5px solid #F8F8F8;
+  border-radius: 50% 50% 50% 50%;
+  height: 120px;
+  left: 30px;
+  position: absolute;
+  top: 30px;
+  width: 120px;
+  margin: 0;
+  display: block;
+  a {
+    border: medium none;
+    display: block;
+    height: 120px;
+    position: absolute;
+    width: 120px; } }
+
+section#cover {
+  background-color: #88ACDB; }
+
+figure#user_logo div.logo {
+  background-color: #88ACDB;
+  background: url("http://mysterious.s3.amazonaws.com/bolt_large.png") no-repeat scroll center center black;
+  border: 2px solid #FFFFFF;
+  border-radius: 50% 50% 50% 50%;
+  height: 80px;
+  left: 50%;
+  margin-left: -42px;
+  margin-top: -42px;
+  position: absolute;
+  top: 50%;
+  width: 80px;
+  background-size: 100% auto;
+  background-color: #fff;
+  background-image: url("http://hackerlabs.co/wp-content/themes/svbtle/images/HackerLabsQR-blue.png"); }
+
+/*figure#user_logo div.logo, article a.kudos.completed div.circle div.filled, figure#cover_logo { background-image: url("http://mysterious.s3.amazonaws.com/flask_large.png"); }*/
+/*figure#user_logo div.logo, article a.kudos.completed div.circle div.filled, figure#cover_logo { background-color: #e6f2a2; background-image: url("http://unitag.fr/qrcode/generate?q=8WzHjjCKe8g0nCHhbwZeYWNJt5CV-uzF_qjl4wWmJiAWK-RkGC-XJbN7heGGvxIei7n2Emx6K-wEZVumlfF_zUsK6AQ02IGi9eNKqyzQ6Mgk3HSbpQJAv592RNS-EbKGpg9SYe4K2_rPV603J21rG3KFWtvOL64Ag8YWgLRMLdRzt-GPQCHos8OujwLXbPrY"); }*/
+
+article a.kudos.completed div.circle div.filled, figure#cover_logo {
+  background-color: #fff;
+  background-image: url("http://hackerlabs.co/wp-content/themes/svbtle/images/HackerLabsQR-blue.png"); }
+
+.blog-header-logo {
+  width: 200px;
+  margin-top: 7em; }
+
+.links {
+  margin-top: 1em;
+  a {
+    display: inline-block;
+    color: #999;
+    clear: both;
+    border: 2px solid #eee;
+    border-radius: 100px;
+    padding: .4em 1em;
+    &:hover {
+      border-color: #0184ca; } } }
+
+a.back-to-blog {
+  color: white;
+  display: inline-block;
+  background: black;
+  border-radius: 4px;
+  padding: 1em;
+  font-size: 1.2em;
+  &:hover {
+    background-color: #0184ca; } }
+
+#nav-above, .entry-utility {
+  display: none; }
+
+.navigation {
+  padding: 6% 8%;
+  overflow: hidden;
+  border-bottom: 1px solid #e2e2e2; }
+
+.home {
+  .navigation {
+    a {
+      background: black;
+      color: white;
+      font-weight: bold;
+      border-radius: 100px;
+      display: inline-block;
+      padding: .4em 1em;
+      text-transform: uppercase;
+      font-size: .9em; }
+    .next {
+      float: right; }
+    a:hover {
+      opacity: .8; } }
+  .single .navigation {} }
+
+#disqus_thread {
+  padding: 0 50px; }
+
+.dsq-comment-header {
+  background: url("") repeat-x scroll 0 0 transparent !important;
+  border: 0px solid #fff!important;
+  background-color: #fff; }
+
+.dsq-comment-body {
+  border-left: 1px solid #ddd; }
+
+.dsq-comment {
+  border-left: 1px solid #ddd!important;
+  padding-left: 10px!important; }
+
+.dsq-button, .dsq-button-small, .dsq-comment-footer-reply-tab, .dsq-global-toolbar-dropdown-container, .dsq-admin-settings, .dsq-community-box, .dsq-messages {
+  background: url("") repeat-x scroll 0 0 transparent !important;
+  background-color: #000!important;
+  color: #fff!important;
+  padding: 10px!important;
+  border: 1px solid #000!important;
+  border-radius: 5px!important;
+  -moz-border-radius: 5px!important;
+  -webkit-border-radius: 5px!important;
+  text-transform: uppercase; }
+
+#dsq-content .dsq-append-post .dsq-post-area {
+  margin: 30px 0 20px 10px!important;
+  border-radius: 5px!important; }
+
+/* Begin Comments*/
+
+comments, #comments-count {
+  padding: 0em 50px; }
+
+ol.commentlist {
+  list-style: none;
+  margin: 0;
+  padding: 0 50px;
+  text-indent: 0;
+  li {
+    border-left: 0px solid #ddd;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    height: 1%;
+    margin: 0 0 10px;
+    padding: 10px;
+    position: relative;
+    &.alt, &.bypostauthor, &.byuser, &.comment-author-admin, &.comment {}
+    div {
+      &.comment-author {
+        padding: 0 170px 0 0; }
+      &.vcard {
+        cite.fn {
+          font-style: normal;
+          font-weight: bold;
+          a.url {
+            color: #333;
+            text-decoration: none;
+            &:hover {
+              color: #000; } } }
+        img {
+          &.avatar {
+            border: 3px solid #e2e2e2;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            margin: 0 0 10px;
+            float: left;
+            margin-right: 10px; }
+          &.avatar-32, &.photo {} }
+        span.says {} }
+      &.commentmetadata {}
+      &.comment-meta {
+        font-size: 12px;
+        color: #aaa;
+        a {
+          color: #aaa;
+          text-decoration: none;
+          &:hover {
+            color: #000; } } }
+      &.commentbody {
+        margin-top: 1em;
+        font-size: 14px; } }
+    p {
+      margin: 0 0 1em; }
+    ul {
+      list-style: square;
+      margin: 0 0 1em;
+      padding: 0;
+      text-indent: 0; }
+    div.reply {
+      margin-bottom: 7px;
+      a {
+        &:hover {
+          background: #0184CA;
+          border: 1px solid #0184CA; }
+        background: #000;
+        border: 1px solid #000;
+        border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        color: #fff;
+        padding: 5px 6px 4px;
+        text-align: center;
+        width: 36px;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase; } }
+    ul.children {
+      border-left: 1px #E2E2E2 solid;
+      list-style: none;
+      margin: 1em 10px 0;
+      text-indent: 0;
+      li {
+        &.alt {}
+        &.bypostauthor {
+          border-left: 10px solid #f00; }
+        &.byuser, &.comment, &.comment-author-admin {}
+        &.depth-2, &.depth-3, &.depth-4, &.depth-5 {
+          margin: 0 0 .18em; }
+        &.odd {} } }
+    &.even, &.odd {
+      background: #fff; }
+    &.parent {}
+    &.pingback {
+      &.parent {}
+      div.vcard {
+        padding: 0 170px 0 0; } }
+    &.thread-alt, &.thread-even, &.thread-odd {} }
+  .comment-wrapper {
+    padding: 5px 10px;
+    border-left: 0px #F8F8F8 solid; } }
+
+/* Comment Form */
+
+#commentform {
+  input {
+    width: 170px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: Georgia, Times; }
+  margin: 5px 0px 0 0;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  p {
+    label {
+      color: #999;
+      width: 120px;
+      display: block;
+      float: left; }
+    border-top: 0px solid #eee;
+    padding: 10px 50px;
+    margin: 0;
+    font-size: 14px; }
+  textarea {
+    width: 70%;
+    padding: 2px;
+    border: 1px solid #ccc;
+    padding: 4px;
+    font-family: Georgia, Times; } }
+
+.cancel-comment-reply {
+  display: none; }
+
+#commentform {
+  #submit {
+    padding: 1em;
+    background: #000;
+    color: #fff!important;
+    margin-left: 170px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border: 1px solid #000;
+    font-weight: bold; }
+  small, #submit {
+    color: #000;
+    text-transform: uppercase;
+    font-family: arial; }
+  small {
+    font-size: 11px;
+    font-weight: bold; } }
+
+#respond h3 {
+  padding: 20px 50px 0 50px;
+  margin-bottom: 10px; }
+
+.codecolorer-container {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px; }
+
+em {
+  color: brown; }
+
+.basic-alignment { 
+    border: 3px solid #ff4073;
+    color: #FF4073;
+    border-radius: 70px 70px 70px 70px;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 800;
+    margin: 50px;
+    padding: 10px 30px 10px 20px;
+    text-transform: uppercase;
+  &:hover {
+    background-color: #ff4073;
+    color: #fff; }
+}
+
+header .social a {
+  &.twitter {
+    background: url("http://justcramer.com/images/twitter.png?1335336011") no-repeat scroll center center #55cff8;
+    border: 1px solid #55CFF8; }
+  &.github {
+    background: url("http://justcramer.com/images/github.png?1335336011") no-repeat scroll center center #afb6ca;
+    border: 1px solid #AFB6CA; }
+  &.rss {
+    background: url("http://justcramer.com/images/rss.png?1335336011") no-repeat scroll center center #ef7522;
+    border: 1px solid #EF7522; }
+  &.contact {
+    background-color: #90A935;
+    color: #fff;
+    border: 1px solid #90A935;
+    font-weight: bold;
+    font-size: 18px;
+    text-indent: 4px; }
+  &:hover {
+    opacity: 1; }
+  -moz-box-orient: vertical;
+  -moz-transition: all 0.3s ease 0s;
+  border-radius: 50% 50% 50% 50%;
+  display: inline-block;
+  height: 28px;
+  margin-right: 15px;
+  opacity: 0.5;
+  text-indent: -9999px;
+  vertical-align: middle;
+  width: 28px; }
+
+/*header .social a.search { background: url("http://justcramer.com/images/email.png?1335336011") no-repeat scroll center center #EF7522; border: 1px solid #EF7522; }*/
+
+/* ==|== media queries ======================================================
+   EXAMPLE Media Query for Responsive Design.
+   This example overrides the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+
+.ir {
+  display: block;
+  border: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+  *line-height: 0;
+  br {
+    display: none; } }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  &.focusable {
+    &:active, &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto; } } }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+
+/* Hide visually and from screenreaders, but maintain layout */
+
+.invisible {
+  visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */
+
+.clearfix {
+  &:before {
+    content: "";
+    display: table; }
+  &:after {
+    content: "";
+    display: table;
+    clear: both; }
+  *zoom: 1; }
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important; }
+  /* Black prints faster: h5bp.com/s */
+  a {
+    text-decoration: underline;
+    &:visited {
+      text-decoration: underline; }
+    &[href]:after {
+      content: " (" attr(href) ")"; } }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  .ir a:after {
+    content: ""; }
+  a {
+    &[href^="javascript:"]:after, &[href^="#"]:after {
+      content: ""; } }
+  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  /* h5bp.com/t */
+  tr {
+    page-break-inside: avoid; }
+  img {
+    page-break-inside: avoid;
+    max-width: 100% !important; }
+  @page {
+    margin: 0.5cm; }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+  h2, h3 {
+    page-break-after: avoid; } }
+
+/** END HTML5 Boilerplate CSS **/
+
+/** START Starkers CSS **/
+
+/* LAYOUT */
+/* ----------------------------------------- */
+
+/* These rather presentational classes are generated by WordPress, so it's useful to have some styles for them. Edit as you see fit. More info: http://codex.wordpress.org/CSS */
+
+.aligncenter {
+  display: block;
+  margin: 0 auto; }
+
+.alignleft {
+  float: left; }
+
+.alignright {
+  float: right; }
+
+.wp-caption {
+  border: 0px solid #666;
+  text-align: center;
+  background: #fff;
+  padding: 10px;
+  margin: 10px; }
+
+/* You might find the following useful */
+                                                                      /* div, ul, li { position:relative } This will save you having to declare each div / ul / li's position as 'relative' and allows you to absolutely position elements inside them
+br.clear { clear:both; display:block; height:1px; margin:-1px 0 0 0 } /* Use this br class to clear your floated columns */
+
+li#theme-switcher {
+  background: #fff;
+  border: 10px solid red;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0; }
+
+/* Use this if you have the Theme Switcher Reloaded plugin (http://themebot.com/webmaster-tools/1-wordpress-theme-switcher-reloaded) installed and want to make it nice and obvious */
+
+/* TYPOGRAPHY */
+/* ----------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font: 300 26px / 36px "Arvo", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold; }
+
+/* This helps to identify headings at the initial build stage, so I thought it'd be useful to have it */
+
+.alert {
+  background: red;
+  color: white; }
+
+/* 'alert' has a basic style, since it's useful to have it standing out for testing purposes.
+
+
+
+/* Font stack options
+
+	The following represents a list of font stacks, as recommended by Nathan Ford in
+	http://unitinteractive.com/blog/2008/06/26/better-css-font-stacks/
+
+	I've added inverted commas around the relevant family names to ensure compatibility.
+	p = balanced for paragraphs or body copy
+	t = balanced for headlines or titles
+
+	- - - -
+
+Arial, "Helvetica Neue", Helvetica, sans-serif - p, t
+
+Baskerville, "Times New Roman", Times, serif - p
+Baskerville, "Times, Times New Roman", serif - t
+
+Cambria, Georgia, Times, "Times New Roman", serif - p, t
+"Century Gothic", "Apple Gothic", sans-serif - p, t
+
+Consolas, "Lucida Console", Monaco, monospace - p, t
+
+"Copperplate Light", "Copperplate Gothic Light", serif - p, t
+
+"Courier New", Courier, monospace - p, t
+
+"Franklin Gothic Medium", "Arial Narrow Bold", Arial, sans-serif - p, t
+
+Futura, "Century Gothic", "Apple Gothic", sans-serif - p, t
+
+Garamond, "Hoefler Text", "Times New Roman", Times, serif - p
+Garamond, "Hoefler Text", Palatino, "Palatino Linotype", serif - t
+
+Geneva, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif - p
+Geneva, Verdana, "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif - t
+
+Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif - p
+Georgia, Times, "Times New Roman", serif - t
+
+GillSans, Calibri, Trebuchet, sans-serif - p
+GillSans, Trebuchet, Calibri, sans-serif - t
+
+"Helvetica Neue", Arial, Helvetica, sans-serif - p
+Helvetica, "Helvetica Neue", Arial, sans-serif - t
+
+Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif - p, t
+
+"Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif - p, t
+
+Palatino, "Palatino Linotype", Georgia, Times, "Times New Roman", serif - p
+Palatino, "Palatino Linotype", "Hoefler Text", Times, "Times New Roman", serif - t
+
+Tahoma, Geneva, Verdana - p
+Tahoma, Verdana, Geneva - t
+
+Times, "Times New Roman", Georgia, serif - p, t
+
+Trebuchet, "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif - p
+Trebuchet, Tahoma, Arial, sans-serif - t
+
+Verdana, Geneva, Tahoma, sans-serif - p
+Verdana, Tahoma, Geneva, sans-serif - t
+
+*/
+
+/** END Starkers CSS **/
+
+/** START WordPress-Defined CSS Classes **/
+
+.wp-caption-text, .gallery-caption, .bypostauthor, .sticky {}
+
+/** END WordPress-Defined CSS Classes **/

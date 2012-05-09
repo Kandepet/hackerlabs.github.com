@@ -3,6 +3,8 @@ layout: default
 single: true
 ---
 
+{% comment %}
+
 <div>
 <article class="hentry" role="article">
   {% include article.html %}
@@ -41,3 +43,19 @@ single: true
   {% endif %}
 </aside>
 {% endunless %}
+{% endcomment %}
+
+<article id="post-47" class="post-47 post type-post status-publish format-standard hentry category-digital-self category-entropy category-information">
+  {% include article.html %}
+  <footer>
+    <p class="meta">
+        <a class="basic-alignment left" href="/" title="Back to Blog">←&nbsp; Back to blog</a>
+    </p>
+    </footer>
+
+</article>
+<comments>
+  {% if site.disqus_short_name and page.comments == true %}
+  <div id="disqus_thread" aria-live="polite">{% include disqus.html %}</div>
+  {% endif %}
+</comments>

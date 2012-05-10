@@ -7,15 +7,17 @@
 <!--[if (gt IE 9)|!(IE)]><!--><html dir="ltr" lang="en-US" class="no-js"><!--<![endif]-->
     <head>
         <meta charset="UTF-8" />
-  <title>Category: Hobby - Hacker Labs</title>
+  <title>search - Hacker Labs</title>
   <meta name="author" content="Deepak Kandepet">
 
   
-  <meta name="description" content="Category: Hobby">
+  <meta name="description" content="var a;
+//jQuery("#st-search-input").val("Enter search term");
+var customRenderFunction = function (document_type, item) { //alert(document_type); // &hellip;">
   
 
   
-  <link rel="canonical" href="http://HackerLabs.github.comblog/categories/hobby">
+  <link rel="canonical" href="http://HackerLabs.github.com/search">
 
         <link rel="shortcut icon" href="http://hackerlabs.co/wp-content/themes/svbtle/images/favicon.ico" />
         <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -121,45 +123,38 @@ h6 { font-family: 'Arvo', arial, serif; }
 
 
 <article id="post-47" class="post-47 post type-post status-publish format-standard hentry category-digital-self category-entropy category-information">
-  <div class="entry-meta" >
-    <!--<span class="entry-date">August 4 2011</span>-->
-    
-
-
-
-
-
-
-
-
-
-
-
-    
+  <div class="entry-content">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type='text/javascript' src='https://raw.github.com/swiftype/swiftype-search-jquery/master/jquery.ba-hashchange.min.js'></script>
+<script type="text/javascript" src="https://raw.github.com/swiftype/swiftype-search-jquery/master/jquery.swiftype.search.js"></script>
+<div class="search-container">
+    <form> <input type="text" id="st-search-input" value="search" class="st-search-input" /> </form>
+    <br/>
+    <br/>
+    <div id="st-results-container"></div>
 </div>
 
+<script type="text/javascript">
+var a;
+//jQuery("#st-search-input").val("Enter search term");
+var customRenderFunction = function (document_type, item) {
+  //alert(document_type);
+  //alert(item.toSource());
+  return '<div class="st-result"><h3 class="title"><a href="' + item['url'] + '" class="st-search-result-link">' + item['title'] + '</a></h3><p>' + item['highlight'].body + '</p><a href="' + item['url'] + '">' + item['url'] + '</a></div>';
+};
+
+jQuery('#st-search-input').swiftypeSearch({
+  renderFunction: customRenderFunction,
+  fetchFields: {'posts' : ['title','link','body', 'published_on']},
+  resultContainingElement: '#st-results-container',
+  engineKey: 'yp4imGCcpVF6mqypDhYH',
+});
+</script>
 
 
-<div class="entry-content"><div id="blog-archives" class="category">
 
+    
 
-
-  
-  <h2>2011</h2>
-
-<article>
-  
-<h1><a href="/blog/2011/06/16/gods-number-is-20-mine-is-67-2/">God's number is 20, mine is 67.</a></h1>
-<time datetime="2011-06-16T17:01:44+00:00" pubdate><span class='month'>Jun</span> <span class='day'>16</span> <span class='year'>2011</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/hobby/'>Hobby</a>, <a class='category' href='/blog/categories/puzzles/'>Puzzles</a>, <a class='category' href='/blog/categories/rubiks-cube/'>Rubiks cube</a></span>
-</footer>
-
-
-</article>
-
-</div>
 </div>
 
 </article>

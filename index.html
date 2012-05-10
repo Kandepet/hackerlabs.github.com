@@ -11,7 +11,8 @@
   <meta name="author" content="Deepak Kandepet">
 
   
-  <meta name="description" content="Welcome to Hacker Labs. I am a software engineer working for one the best search companies. Hacker labs is my playground where I experiment with the &hellip;">
+  <meta name="description" content="Service Name &nbsp; Search Fork on GitHub About Hacker Labs var a;
+jQuery("#service_hook").mouseenter(function(){clearTimeout(a),jQuery("#st-search- &hellip;">
   
 
   
@@ -106,8 +107,11 @@ h6 { font-family: 'Arvo', arial, serif; }
         <a class="twitter" href="http://twitter.com/HackerLabs" title="Twitter">Twitter</a>
         <a class="github" href="https://github.com/HackerLabs" title="GitHub">GitHub</a>
         <a class="contact" href="http://hackerlabs.co/contact" title="contact">@</a>
+        <a class="search" href="/search/" title="search">Search</a>
         <a class="rss" href="http://feeds.feedburner.com/HackerLabs" title="RSS">RSS</a>
     </div>
+
+
 
 </div>
 
@@ -115,6 +119,41 @@ h6 { font-family: 'Arvo', arial, serif; }
         <section id="content" role="main">
         <article id="post-47" class="post-47 post type-post status-publish format-standard hentry category-digital-self category-entropy category-information">
             
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type='text/javascript' src='https://raw.github.com/swiftype/swiftype-search-jquery/master/jquery.ba-hashchange.min.js'></script>
+<script type="text/javascript" src="https://raw.github.com/swiftype/swiftype-search-jquery/master/jquery.swiftype.search.js"></script>
+<article style="border-left: 10px solid #C0143C; padding: 3em 50px">
+<nav id="service_hook">
+    <a href="?">Service Name</a>
+</nav>
+<ul id="magic_bar" style="display: none;">
+    <li class="triangle">&nbsp;</li>
+    <li class="signup"><a class="signup" href="/search/">Search</a> </li>
+    <li class="signup"><a class="signup" href="https://github.com/HackerLabs/hackerlabs.github.com">Fork on GitHub</a></li>
+    <li class="signup"><a class="signup" href="/about/">About Hacker Labs</a></li>
+</ul>
+
+</article>
+
+<script type="text/javascript">
+var a;
+jQuery("#service_hook").mouseenter(function(){clearTimeout(a),jQuery("#st-search-input").val("search"),jQuery("#magic_bar").show()}).mouseleave(function(){a=setTimeout("jQuery('#magic_bar').hide();",300)});
+jQuery("#magic_bar").mouseenter(function(){clearTimeout(a),jQuery("#magic_bar").show()}).mouseleave(function(){a=setTimeout("jQuery('#magic_bar').hide();",300)});
+var customRenderFunction = function (document_type, item) {
+  //alert(document_type);
+  //alert(item.toSource());
+  return '<div class="st-result"><h3 class="title"><a href="' + item['url'] + '" class="st-search-result-link">' + item['title'] + '</a></h3><p>' + item['highlight'].body + '</p><a href="' + item['url'] + '">' + item['url'] + '</a></div>';
+};
+
+jQuery('#st-search-input').swiftypeSearch({
+  renderFunction: customRenderFunction,
+  fetchFields: {'posts' : ['title','link','body', 'published_on']},
+  resultContainingElement: '#st-results-container',
+  engineKey: 'yp4imGCcpVF6mqypDhYH',
+});
+</script>
+
 
 <article style="border-left: 10px solid #C0143C; padding: 3em 50px">
 <h2> Welcome to Hacker Labs.  </h2>
@@ -130,17 +169,17 @@ h6 { font-family: 'Arvo', arial, serif; }
 <frontpage-list id="post-0" style="padding: 0px 50px">
 <ul class="frontpage-blog-list">
     
-    <a href="/blog/2012/05/09/from-bits-to-waves-the-inner-workings-of-an-ethernet-controller/" rel="post" title="From bits to waves - The inner workings of an ethernet controller" class="frontpage-blog-link" ><li class="Internals-category Search-category "><span class="frontpage-date">09/May/2012</span>From bits to waves - The inner workings of an ethernet controller</li> </a>
+    <a href="/blog/2012/05/09/from-bits-to-waves-the-inner-workings-of-an-ethernet-controller/" rel="post" title="From bits to waves - The inner workings of an ethernet controller" class="frontpage-blog-link" ><li class="Default-category  Internals-category "><span class="frontpage-date">09/May/2012</span>From bits to waves - The inner workings of an ethernet controller</li> </a>
     
-    <a href="/blog/2012/05/07/zombie-ninjas-attack-a-survivors-retrospective/" rel="post" title="Zombie Ninjas Attack: A survivor's retrospective" class="frontpage-blog-link" ><li class="Internals-category Search-category "><span class="frontpage-date">07/May/2012</span>Zombie Ninjas Attack: A survivor&#8217;s retrospective</li> </a>
+    <a href="/blog/2012/05/07/zombie-ninjas-attack-a-survivors-retrospective/" rel="post" title="Zombie Ninjas Attack: A survivor's retrospective" class="frontpage-blog-link" ><li class="Default-category "><span class="frontpage-date">07/May/2012</span>Zombie Ninjas Attack: A survivor&#8217;s retrospective</li> </a>
     
-    <a href="/blog/2012/04/19/hello-world/" rel="post" title="Hello world!" class="frontpage-blog-link" ><li class="Internals-category Search-category "><span class="frontpage-date">19/Apr/2012</span>Hello world!</li> </a>
+    <a href="/blog/2012/04/19/hello-world/" rel="post" title="Hello world!" class="frontpage-blog-link" ><li class="Default-category "><span class="frontpage-date">19/Apr/2012</span>Hello world!</li> </a>
     
-    <a href="/blog/2011/10/01/hacking-lucene-the-index-format/" rel="post" title="Hacking Lucene - The Index format" class="frontpage-blog-link" ><li class="Internals-category Search-category "><span class="frontpage-date">01/Oct/2011</span>Hacking Lucene - The Index format</li> </a>
+    <a href="/blog/2011/10/01/hacking-lucene-the-index-format/" rel="post" title="Hacking Lucene - The Index format" class="frontpage-blog-link" ><li class="Default-category  Internals-category  Search-category "><span class="frontpage-date">01/Oct/2011</span>Hacking Lucene - The Index format</li> </a>
     
-    <a href="/blog/2011/08/04/how-big-of-a-haystack-do-you-need-to-hide/" rel="post" title="How big of a haystack do you need to hide?" class="frontpage-blog-link" ><li class="Internals-category Search-category "><span class="frontpage-date">04/Aug/2011</span>How big of a haystack do you need to hide?</li> </a>
+    <a href="/blog/2011/08/04/how-big-of-a-haystack-do-you-need-to-hide/" rel="post" title="How big of a haystack do you need to hide?" class="frontpage-blog-link" ><li class="Default-category  Digital Self-category  Entropy-category  Information-category "><span class="frontpage-date">04/Aug/2011</span>How big of a haystack do you need to hide?</li> </a>
     
-    <a href="/blog/2011/06/16/gods-number-is-20-mine-is-67-2/" rel="post" title="God's number is 20, mine is 67." class="frontpage-blog-link" ><li class="Internals-category Search-category "><span class="frontpage-date">16/Jun/2011</span>God&#8217;s number is 20, mine is 67.</li> </a>
+    <a href="/blog/2011/06/16/gods-number-is-20-mine-is-67-2/" rel="post" title="God's number is 20, mine is 67." class="frontpage-blog-link" ><li class="Default-category  Hobby-category  Puzzles-category  Rubiks cube-category "><span class="frontpage-date">16/Jun/2011</span>God&#8217;s number is 20, mine is 67.</li> </a>
     
 </ul>
 <br>

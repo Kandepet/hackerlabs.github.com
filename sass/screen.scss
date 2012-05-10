@@ -504,6 +504,11 @@ frontpage-list {
     &:hover {
       background: inherit;
       color: inherit; } }
+  .Default-category {
+    border-right: 10px #A52A2A solid;
+    &:hover {
+      color: #fff;
+      background: #A52A2A; } }
   .Internals-category {
     border-right: 10px #556270 solid;
     &:hover {
@@ -873,6 +878,9 @@ header .social a {
     font-weight: bold;
     font-size: 18px;
     text-indent: 4px; }
+  &.search {
+    background: url("http://justcramer.com/images/search.png?1335336011") no-repeat scroll center center #C0143C;
+    border: 1px solid #C0143C; }
   &:hover {
     opacity: 1; }
   -moz-box-orient: vertical;
@@ -880,7 +888,7 @@ header .social a {
   border-radius: 50% 50% 50% 50%;
   display: inline-block;
   height: 28px;
-  margin-right: 15px;
+  margin-right: 5px;
   opacity: 0.5;
   text-indent: -9999px;
   vertical-align: middle;
@@ -1137,3 +1145,235 @@ Verdana, Tahoma, Geneva, sans-serif - t
 .wp-caption-text, .gallery-caption, .bypostauthor, .sticky {}
 
 /** END WordPress-Defined CSS Classes **/
+
+
+nav#service_hook {
+    background: url("//fast.svbtle.com/cargo/misc/down_arrow_tiny_white-bdff8e15395c44d000e8bb19d9043d4f.png") no-repeat scroll 37px 50% #000000;
+    border-radius: 4px 4px 4px 4px;
+    display: block;
+    height: 40px;
+    position: absolute;
+    right: 25px;
+    top: 13px;
+    width: 60px;
+    z-index: 9999;
+}
+nav#service_hook.lighten {
+    background: url("//fast.svbtle.com/cargo/misc/down_arrow_tiny_whit.png") no-repeat scroll 37px 50% #999999;
+}
+nav#service_hook a {
+    //background: url("//fast.svbtle.com/cargo/misc/lightning_small_nav-9c8c33441dbb81b51598ae36bbd3aac7.png") no-repeat scroll center center transparent;
+    border: medium none;
+    color: #FFFFFF;
+    display: block;
+    height: 40px;
+    position: relative;
+    text-decoration: none;
+    text-indent: -9999px;
+    width: 35px;
+}
+ul#magic_bar {
+    background-color: #FFFFFF;
+    border: 1px solid #A9A9A9;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 3px #A9A9A9;
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 60px;
+    width: 450px;
+    z-index: 99999;
+    padding: 0px;
+}
+ul#magic_bar li {
+    display: block;
+}
+ul#magic_bar li a {
+    background: url("//fast.svbtle.com/cargo/navigation/circle-3d5294ea4eabae2f76a8376a99fedb32.png") no-repeat scroll 15px 14px transparent;
+    border-bottom: 1px solid #DFDFDF;
+    display: block;
+    font-size: 19px;
+    line-height: 55px;
+    padding-left: 55px;
+    text-decoration: none;
+}
+ul#magic_bar .search {
+    border-bottom: 1px solid #DFDFDF;
+    display: block;
+    font-size: 19px;
+    line-height: 55px;
+    text-decoration: none;
+}
+ul#magic_bar li.catch p {
+    border-bottom: 1px solid #DFDFDF;
+    color: #000000;
+    font-size: 35px;
+    font-weight: 900;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 25px 25px 25px 15px;
+}
+ul#magic_bar li.dashboard a {
+    background-image: url("//fast.svbtle.com/cargo/navigation/dashboard-144badfc4232a6e687e9635f31afa372.png");
+}
+ul#magic_bar li.logout a, ul#magic_bar li.login a {
+    background-image: url("//fast.svbtle.com/cargo/navigation/logout-57831bc3f922e184b81ff7037c1762f3.png");
+}
+ul#magic_bar li.settings a {
+    background-image: url("//fast.svbtle.com/cargo/navigation/settings-61cd6c9f9b7557c8566c542230dfec8d.png");
+}
+ul#magic_bar li.blog a {
+    background-image: url("//fast.svbtle.com/cargo/navigation/blog-0c0ff14d84530da1a4dad624238a05ee.png");
+}
+ul#magic_bar li.write a, ul#magic_bar li.signup a {
+    background-image: url("//fast.svbtle.com/cargo/navigation/write-1e22f406de13ddd9f3860ad0d8d95f6c.png");
+}
+ul#magic_bar li a:hover {
+    background-color: #F8F8F8;
+}
+ul#magic_bar li a:active {
+    background-color: #E2E2E2;
+}
+ul#magic_bar li {
+    clear: both;
+    display: block;
+}
+ul#magic_bar li.triangle {
+    background: url("//fast.svbtle.com/cargo/navigation/triangle-8882eee2ba583f062a7c26f3db0850ee.png") no-repeat scroll right top transparent;
+    margin-right: 25px;
+    margin-top: -14px;
+}
+ul#magic_bar li:nth-child(2) a:hover {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+ul#magic_bar li:last-child a:hover {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+ul#magic_bar li.photo {
+    background: url("//fast.svbtle.com/cargo/navigation/chemist-7c07c29d1fd5cfc4ff70044909a9c167.png") no-repeat scroll -150px -30px #444444;
+    box-shadow: 0 0 10px #000000 inset;
+    display: block;
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+
+.search-container {
+    padding: 50px 10px;
+    width: 100%;
+    height: 1200px;
+}
+
+.search-container form {
+    text-align: center;
+}
+
+form input.st-search-input {
+    background: url("") no-repeat scroll 14px 14px #EEEEEE!important;
+    border: 0px solid #CCCCCC!important;
+    //border-left: 10px solid #C0143C!important;
+    //border-right: 10px solid #C0143C!important;
+    border-radius: 5px!important;
+    box-shadow: none!important;
+    color: #666666;
+    font-size: 26px!important;
+    height: 28px!important;
+    outline: medium none;
+    padding: 5px 9px 5px 10px!important;
+    margin: 10px 20px;
+    width: auto!important;
+}
+
+
+#st-results-container {
+    padding: 10px 20px;
+}
+
+.st-result {
+    //font: 300 14px/16px "Arvo","Cardo","Lato","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+}
+
+.st-result h3 {
+  font-size: 12px;
+  font-weight: bold!important;
+  margin: 5px 0;
+  font: 300 14px/16px "Arvo","Cardo","Lato","Helvetica Neue",Helvetica,Arial,sans-serif!important;
+}
+
+.st-result h3 a {
+  font-weight: bold!important;
+  text-decoration: none!important;
+  border-bottom: 0px;
+}
+
+.st-result p {
+  //font-size: 14px;
+  line-height: 1.4!important;
+}
+
+div.st-search-summary {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 7px;
+  margin: 12px 0;
+}
+
+div.st-result-listing {
+  width: 600px;
+}
+
+div.st-result-listing h2 {
+  font-size: 13px;
+  font-weight: normal;
+  color: #333;
+  margin: 0;
+}
+
+div.st-result-listing h2 .st-query {
+  font-style: italic;
+  color: #666;
+}
+
+div.st-result-listing h3 {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+div.st-result {
+  //border-bottom: 1px solid #ddd;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+div.st-result.final {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+div.st-result .st-snippet {
+  color: #333;
+}
+
+div.st-result .st-date {
+  color: #999;
+}
+
+.st-pagination {
+  border-top: 1px solid #ccc;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+.st-prev {
+  margin-right: 20px;
+}
+
+.st-loading-message {
+  font-size: 16px;
+  font-style: italic;
+  color: #999;
+  margin: 10px auto;
+}
+

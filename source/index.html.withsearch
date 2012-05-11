@@ -1,0 +1,99 @@
+---
+layout: default
+---
+
+
+{% assign index = true %}
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type='text/javascript' src='https://raw.github.com/swiftype/swiftype-search-jquery/master/jquery.ba-hashchange.min.js'></script>
+<script type="text/javascript" src="https://raw.github.com/swiftype/swiftype-search-jquery/master/jquery.swiftype.search.js"></script>
+<article style="border-left: 10px solid #C0143C; padding: 3em 50px">
+<nav id="service_hook">
+    <a href="?">Service Name</a>
+</nav>
+<ul id="magic_bar" style="display: none;">
+    <li class="triangle">&nbsp;</li>
+    <li class="signup"><a class="signup" href="/search/">Search</a>
+    <div>
+        <form> <input type="text" id="st-search-input" value="search" class="st-search-input" /> </form>
+    </div>
+    </li>
+        <div id="st-results-container"></div>
+    <li class="signup"><a class="signup" href="https://github.com/HackerLabs/hackerlabs.github.com">Fork on GitHub</a></li>
+    <li class="signup"><a class="signup" href="/about/">About Hacker Labs</a></li>
+</ul>
+
+</article>
+
+<script type="text/javascript">
+var a;
+jQuery("#service_hook").mouseenter(function(){clearTimeout(a),jQuery("#st-search-input").val("search"),jQuery("#magic_bar").show()}).mouseleave(function(){a=setTimeout("jQuery('#magic_bar').hide();",300)});
+jQuery("#magic_bar").mouseenter(function(){clearTimeout(a),jQuery("#magic_bar").show()}).mouseleave(function(){a=setTimeout("jQuery('#magic_bar').hide();",300)});
+var customRenderFunction = function (document_type, item) {
+  //alert(document_type);
+  //alert(item.toSource());
+  return '<div class="st-result"><h3 class="title"><a href="' + item['url'] + '" class="st-search-result-link">' + item['title'] + '</a></h3><p>' + item['highlight'].body + '</p><a href="' + item['url'] + '">' + item['url'] + '</a></div>';
+};
+
+jQuery('#st-search-input').swiftypeSearch({
+  renderFunction: customRenderFunction,
+  fetchFields: {'posts' : ['title','link','body', 'published_on']},
+  resultContainingElement: '#st-results-container',
+  engineKey: 'yp4imGCcpVF6mqypDhYH',
+});
+</script>
+
+
+<article style="border-left: 10px solid #C0143C; padding: 3em 50px">
+<h2> Welcome to {{site.title}}.  </h2>
+<p>{{site.description}}<p>
+
+<a class="continue" href="/about/">More →</a>
+</article>
+
+<article id="post-0" style="padding: 0px 50px">
+<h2>BLOG POSTS</h2>
+</article>
+
+<frontpage-list id="post-0" style="padding: 0px 50px">
+<ul class="frontpage-blog-list">
+    {% for post in site.posts %}
+    <a href="{{post.url}}" rel="post" title="{{post.title}}" class="frontpage-blog-link" ><li class="Default-category {% for cat in post.categories %} {{cat}}-category {% endfor %}"><span class="frontpage-date">{{post.date | date: "%d/%b/%Y"}}</span>{{post.title}}</li> </a>
+    {% endfor %}
+</ul>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</frontpage-list><!-- #post-0 -->
+
+
+

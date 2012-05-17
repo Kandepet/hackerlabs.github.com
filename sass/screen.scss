@@ -649,7 +649,7 @@ a.back-to-blog {
   .single .navigation {} }
 
 #disqus_thread {
-  padding: 0 50px; }
+  padding: 50px 50px; }
 
 .dsq-comment-header {
   background: url("") repeat-x scroll 0 0 transparent !important;
@@ -663,7 +663,7 @@ a.back-to-blog {
   border-left: 1px solid #ddd!important;
   padding-left: 10px!important; }
 
-.dsq-button, .dsq-button-small, .dsq-comment-footer-reply-tab, .dsq-global-toolbar-dropdown-container, .dsq-admin-settings, .dsq-community-box, .dsq-messages {
+.btn-group, .dsq-button, .dsq-button-small, .dsq-comment-footer-reply-tab, .dsq-global-toolbar-dropdown-container, .dsq-admin-settings, .dsq-community-box, .dsq-messages {
   background: url("") repeat-x scroll 0 0 transparent !important;
   background-color: #000!important;
   color: #fff!important;
@@ -1416,3 +1416,15 @@ div.st-result .st-date {
   float: right;
   width: 28px; }
 
+#thread-votes {
+  background: url("") repeat-x scroll 0 0 transparent !important;
+  background-color: #000!important;
+  color: #fff!important;
+  padding: 10px!important;
+  border: 1px solid #000!important;
+  border-radius: 5px!important;
+  -moz-border-radius: 5px!important;
+  -webkit-border-radius: 5px!important;
+  text-transform: uppercase; }
+
+.alert.info { display: none!important; }

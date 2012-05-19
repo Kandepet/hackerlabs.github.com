@@ -464,6 +464,8 @@ body #content article {
 
 article .entry-content {
   padding-top: 0em;
+  padding-top: 40px;
+  h1 { margin-top: 0px }
   p {
     line-height: 1.9em; }
   a {
@@ -557,6 +559,7 @@ article a.continue {
 figure#user_logo {
   border: 5px solid #F8F8F8;
   border-radius: 50% 50% 50% 50%;
+  -webkit-border-radius: 70px !important;
   height: 120px;
   left: 30px;
   position: absolute;
@@ -892,6 +895,7 @@ header .social a {
   -moz-box-orient: vertical;
   -moz-transition: all 0.3s ease 0s;
   border-radius: 50% 50% 50% 50%;
+  -webkit-border-radius: 70px !important;
   display: inline-block;
   height: 28px;
   margin-right: 5px;
@@ -1435,6 +1439,7 @@ div.st-result .st-date {
   -moz-box-orient: vertical;
   -moz-transition: all 0.3s ease 0s;
   border-radius: 50% 50% 50% 50%;
+  -webkit-border-radius: 70px !important;
   display: inline-block;
   height: 28px;
   margin-right: 5px;
@@ -1459,6 +1464,7 @@ div.st-result .st-date {
 
 #contact-form {
    padding: 20px;
+   height: 100%;
 }
 
 header#header.info {

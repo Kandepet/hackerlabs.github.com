@@ -1,5 +1,4 @@
-<div class="entry-meta" >
-    <!--<span class="entry-date">August 4 2011</span>-->
+<!--<div class="entry-meta" >
     <div class="search alignright">
         <a class="search" href="/search/" title="search">Search</a>
     </div>
@@ -8,9 +7,15 @@
     | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">Comments</a>
     {% endif %}
 </div>
+ -->
 
 {% if site.pagetitle %}
 <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
 {% endif %}
 
-<div class="entry-content">{{ content }}</div>
+<div class="entry-content">
+    <div class="search alignright">
+        <a class="search" href="/search/" title="search">Search</a>
+    </div>
+   {{ content }}
+</div>

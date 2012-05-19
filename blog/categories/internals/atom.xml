@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Internals | Hacker Labs]]></title>
   <link href="http://HackerLabs.github.com/blog/categories/internals/atom.xml" rel="self"/>
   <link href="http://HackerLabs.github.com/"/>
-  <updated>2012-05-17T18:06:29+00:00</updated>
+  <updated>2012-05-19T22:32:31+00:00</updated>
   <id>http://HackerLabs.github.com/</id>
   <author>
     <name><![CDATA[Deepak Kandepet]]></name>
@@ -31,7 +31,7 @@ converts the packets sent by the driver to signals transmitted over physical wir
 <p>The 82559 is an Intel ethernet chipset. It supports 10/100 Mbps full duplex data communication over a pair of wires.
 This is a high level block diagram of the 82559.</p>
 
-<p><img src="http://hackerlabs.co/wp-content/uploads/2012/05/82559-Block-Diagram.png" alt="82559 Block Diagram" /></p>
+<p><span class='caption-wrapper'><img src="/images/from-bits-to-waves/82559-Block-Diagram.png" title="Block Diagram of 82559" ><span class='caption-text'>Block Diagram of 82559</span></span></p>
 
 <p>The most important subsystems of 82559 are:</p>
 
@@ -126,10 +126,7 @@ address space. Every other device-specific feature, such as interrupt reporting,
 requirements they have. In order to facilitate this process, all PCI devices, including 82559, must implement a base set
 of configuration registers as defined by the PCe standard registers defined by 82559 is shown in the figure below.</p>
 
-<p>[caption id="attachment_206" align="alignnone" width="707" caption="82559 Configuration Registers"]<a
-href="http://hackerlabs.co/wp-content/uploads/2012/05/82559ConfigSpace.jpg"><img class=" wp-image-206"
-title="82559ConfigSpace" src="http://hackerlabs.co/wp-content/uploads/2012/05/82559ConfigSpace.jpg" alt="" width="707"
-height="499" /></a>[/caption]</p>
+<p><span class='caption-wrapper'><img src="/images/from-bits-to-waves/82559ConfigSpace.jpg" width="82559" title="Config Space" ><span class='caption-text'>Config Space</span></span></p>
 
 <p>The BIOS reads the Vendor ID, Device ID and Class registers in order to detect the device and its type. 82559 being an
 Intel device, returns a hard-coded 8086H for Device ID.</p>
@@ -141,8 +138,7 @@ of memory and/or IO space the device requires. Ese Address Register (BAR) is 32 
 per device. 82559 defines 3 types of BARs, the Control/Status Registers (CSR), Flash, and Expansion ROM as shown in
 figure above.</p>
 
-<p><a href="http://hackerlabs.co/wp-content/uploads/2012/05/BAR.jpg"><img class="alignnone size-full wp-image-209"
-title="BAR" src="http://hackerlabs.co/wp-content/uploads/2012/05/BAR.jpg" alt="" width="567" height="292" /></a></p>
+<p><span class='caption-wrapper'><img src="/images/from-bits-to-waves/BAR.jpg" title="Base Address Register (BAR)" ><span class='caption-text'>Base Address Register (BAR)</span></span></p>
 
 <p>Bit zero in all base registers is read only and is used to determine whether the register maps into memory (0) or I/O
 space (1).ach bove shows the layout of a BAR for memory mapping.</p>
@@ -166,8 +162,7 @@ system. This leaves Linux kernel with little to do other than remap that configu
 bridges) and pci_bus for every bus it finds. These structures are linked together into a tree that mimics the actual PCI
 topology.</p>
 
-<p><a href="http://hackerlabs.co/wp-content/uploads/2012/05/PCITree.jpg"><img class="alignnone size-full wp-image-223"
-title="PCITree" src="http://hackerlabs.co/wp-content/uploads/2012/05/PCITree.jpg" alt="" width="404" height="587" /></a></p>
+<p><span class='caption-wrapper'><img src="/images/from-bits-to-waves/PCITree.jpg" title="PCI Tree" ><span class='caption-text'>PCI Tree</span></span></p>
 
 <p>At this stage, the BIOS has recognized the 82559 and configured its PCI configuration space assigning it unique memory
 and IO space and the Linux kernel has created a pci_dev data structure defining 82559.</p>
@@ -388,7 +383,7 @@ else
     option = 0;
 
 rtnl_lock();
-if (dev_alloc_name(dev, dev-&amp;gt;name) &amp;lt; 0) 
+if (dev_alloc_name(dev, dev-&amp;gt;name) &amp;lt; 0)
     goto err_free_unlock;
 
 /* Read the station address EEPROM before doing the reset.
@@ -612,9 +607,7 @@ stored by the board manufacturer in a non-volatile form, such as in the EEPROM o
 
 <p>82559 expects the EEPROM format to be as shown below.</p>
 
-<p><a href="http://hackerlabs.co/wp-content/uploads/2012/05/82559EEPROMFormat.jpg"><img class="alignnone size-full
-wp-image-261" title="82559EEPROMFormat" src="http://hackerlabs.co/wp-content/uploads/2012/05/82559EEPROMFormat.jpg"
-alt="" width="506" height="248" /></a></p>
+<p><span class='caption-wrapper'><img src="/images/from-bits-to-waves/82559EEPROMFormat.jpg" width="82559" title="EEPROM Format" ><span class='caption-text'>EEPROM Format</span></span></p>
 
 <p>The 82559 automatically reads five words (0H, 1H, 2H, AH, and DH) from the EEPROM during bootup. The MAC address is
 extracted from 0H, 1H &amp; 2H. The rest of the EEPROM map contains device options like type of connector, the device
@@ -861,20 +854,14 @@ a region accessible by the CPU. See the section PCI Kernel Initialization), whil
 <p>Command Block List (CBL) is a linked list of commands to be executed by 82559. Receive Frame Area (RFA) is a linked list
 of data structures that holds the received packets (frames).</p>
 
-<p><a href="http://hackerlabs.co/wp-content/uploads/2012/05/82559SharedMemoryArchitecture_good.jpg"><img class="alignnone
-size-full wp-image-275" title="82559SharedMemoryArchitecture_good"
-src="http://hackerlabs.co/wp-content/uploads/2012/05/82559SharedMemoryArchitecture_good.jpg" alt="" width="607"
-height="596" /></a></p>
+<p><span class='caption-wrapper'><img src="/images/from-bits-to-waves/82559SharedMemoryArchitecture_good.jpg" width="82559" title="Shared Memory Architecture" ><span class='caption-text'>Shared Memory Architecture</span></span></p>
 
 <h4>Controlling 82559 through CSR</h4>
 
 
 <p>The 82559 has seven Control/Status registers which make up the CSR space.</p>
 
-<p>[caption id="attachment_297" align="alignnone" width="387" caption="82559 Command/Status Registers"]<a
-href="http://hackerlabs.co/wp-content/uploads/2012/05/82559CSR.jpg"><img class="size-full wp-image-297" title="82559CSR"
-src="http://hackerlabs.co/wp-content/uploads/2012/05/82559CSR.jpg" alt="82559 Command/Status Registers" width="387"
-height="125" /></a>[/caption]</p>
+<p><span class='caption-wrapper'><img class="/images/from-bits-to-waves/82559CSR.jpg 82559" src="Command/Status" title="Registers (CSR)" ><span class='caption-text'>Registers (CSR)</span></span></p>
 
 <p>The first 8 bytes of the CSR is called the System Control Block (SCB). The SCB serves as a central communication point
 for exchanging control and status information between the host CPU and the 82559.</p>
@@ -890,10 +877,7 @@ frame is received the RU updates the SCB with the RU status and interrupts the C
 <p>Transmit or configure commands issued by CPU are wrapped inside what are called Command Blocks (CB). These command
 blocks are chained together to form the CBL.</p>
 
-<p>[caption id="attachment_305" align="alignnone" width="379" caption="Action Command Block"]<a
-href="http://hackerlabs.co/wp-content/uploads/2012/05/82559ActionCommand.jpg"><img class="size-full wp-image-305"
-title="82559ActionCommand" src="http://hackerlabs.co/wp-content/uploads/2012/05/82559ActionCommand.jpg" alt=""
-width="379" height="182" /></a>[/caption]</p>
+<p><span class='caption-wrapper'><img src="/images/from-bits-to-waves/82559ActionCommand.jpg" title="Action Command" ><span class='caption-text'>Action Command</span></span></p>
 
 <p>Action commands are categorized into two types:</p>
 
@@ -906,9 +890,7 @@ and a data buffer, or a linked list of buffer descriptors and buffers (as shown 
 </ul>
 
 
-<p><a href="http://hackerlabs.co/wp-content/uploads/2012/05/82559DataBuffer.jpg"><img class="alignnone size-full
-wp-image-280" title="82559DataBuffer" src="http://hackerlabs.co/wp-content/uploads/2012/05/82559DataBuffer.jpg" alt=""
-width="381" height="224" /></a></p>
+<p><span class='caption-wrapper'><img src="/images/from-bits-to-waves/82559DataBuffer.jpg" title="Data buffer" ><span class='caption-text'>Data buffer</span></span></p>
 
 <p>When eepro100 is ready to transmit a packet, it must create this Tx command block and send it to 82559. This Tx Command
 block is a structure called TxFD (Transmit Frame Descriptor).
@@ -964,20 +946,12 @@ stores them in the Receive Frame Area (RFA).</p>
 
 <p>The RFA contains Receive Frame Descriptors, Receive Buffer Descriptors, and Receive Buffers (see figure below).</p>
 
-<p>[caption id="attachment_319" align="alignnone" width="708" caption="Receive Frame Area (RFA)"]<a
-href="http://hackerlabs.co/wp-content/uploads/2012/05/82559FlexibleReceiveStructure1.jpg"><img class="size-full
-wp-image-319" title="82559FlexibleReceiveStructure"
-src="http://hackerlabs.co/wp-content/uploads/2012/05/82559FlexibleReceiveStructure1.jpg" alt="Receive Frame Are"
-width="708" height="523" /></a>[/caption]</p>
+<p><span class='caption-wrapper'><img src="/images/from-bits-to-waves/82559FlexibleReceiveStructure1.jpg" title="Flexible Receive Structure" ><span class='caption-text'>Flexible Receive Structure</span></span></p>
 
 <p>The individual Receive Frame Descriptors make up a Receive Descriptor List (RDL) used by the 82559 to store the
 destination and source addresses, the length field, and the status of each frame received.</p>
 
-<p>[caption id="attachment_286" align="alignnone" width="593" caption="Receive Frame Descriptor"]<a
-href="http://hackerlabs.co/wp-content/uploads/2012/05/82559ReceiveFrameDescriptor.jpg"><img class="size-full
-wp-image-286" title="82559ReceiveFrameDescriptor"
-src="http://hackerlabs.co/wp-content/uploads/2012/05/82559ReceiveFrameDescriptor.jpg" alt="Receive Frame Descriptor"
-width="593" height="180" /></a>[/caption]</p>
+<p><span class='caption-wrapper'><img src="/images/from-bits-to-waves/82559ReceiveFrameDescriptor.jpg" title="Receive Frame Descriptor" ><span class='caption-text'>Receive Frame Descriptor</span></span></p>
 
 <p>eepro100 representation of the Receive Frame Descriptor (RxFD):
 ``` c</p>
@@ -1113,10 +1087,7 @@ Tx ring.</p>
 
 <p>The final ethernet frame sent over the wire is:</p>
 
-<p>[caption id="attachment_338" align="alignnone" width="787" caption="Ethernet Frame"]<a
-href="http://hackerlabs.co/wp-content/uploads/2012/05/EthernetFrameFormat.jpg"><img class="size-full wp-image-338"
-title="EthernetFrameFormat" src="http://hackerlabs.co/wp-content/uploads/2012/05/EthernetFrameFormat.jpg" alt="Ethernet
-Frame" width="787" height="69" /></a>[/caption]</p>
+<p><span class='caption-wrapper'><img src="/images/from-bits-to-waves/EthernetFrameFormat.jpg" title="Ethernet Frame Format" ><span class='caption-text'>Ethernet Frame Format</span></span></p>
 
 <p>82559 automatically generates the preamble (alternating 1s and 0s) and start frame delimiter, fetches the destination
 address and length field from the Transmit command, inserts its unique MAC address (that it fetched from the external
@@ -1143,10 +1114,7 @@ the wire:</p>
 </ul>
 
 
-<p>[caption id="attachment_342" align="alignnone" width="214" caption="PHY Module"]<a
-href="http://hackerlabs.co/wp-content/uploads/2012/05/100BaseTxPHYModule.jpg"><img class="size-full wp-image-342"
-title="100BaseTxPHYModule" src="http://hackerlabs.co/wp-content/uploads/2012/05/100BaseTxPHYModule.jpg" alt=""
-width="214" height="390" /></a>[/caption]</p>
+<p><span class='caption-wrapper'><img src="/images/from-bits-to-waves/100BaseTxPHYModule.jpg" title="PHY Module" ><span class='caption-text'>PHY Module</span></span></p>
 
 <h4>Scrambling/Descrambling</h4>
 
@@ -1169,18 +1137,13 @@ advantage that the maximum fundamental frequency of MLT-3 is one-half that of NR
 the spectral energy is below 40MHz versus 70MHz for NRZI. Thus we can achieves the same data rate as NRZI, but do not
 require a wideband transmission medium. The work of the encoder/decoder is to convert between NRZI and MLT-3.</p>
 
-<p>[caption id="attachment_344" align="alignnone" width="873" caption="Encoding &amp; Decoding"]<a
-href="http://hackerlabs.co/wp-content/uploads/2012/05/BitsOnWire.jpg"><img class="size-full wp-image-344"
-title="BitsOnWire" src="http://hackerlabs.co/wp-content/uploads/2012/05/BitsOnWire.jpg" alt="" width="873" height="247"
-/></a>[/caption]</p>
+<p><span class='caption-wrapper'><img src="/images/from-bits-to-waves/BitsOnWire.jpg" title="Bits on Wire" ><span class='caption-text'>Bits on Wire</span></span></p>
 
 <p>Finally, the MLT-3 encoded data is transmitted over the wire. It is important to isolate the the PHY from the CAT-5
 Ethernet cable for load balancing and also feedback. This is done by using specialized Ethernet magnetics with each side
 of the transformer referenced to the appropriate ground.</p>
 
-<p>[caption id="" align="alignnone" width="464" caption="PHY to Magnetics interface"]<img title="PHY to Magnetics
-interface" src="http://interviewquestions.pupilgarage.com/images/EC%20Images/EC_Fig03.gif" alt="" width="464"
-height="286" />[/caption]</p>
+<p><span class='caption-wrapper'><img src="http://interviewquestions.pupilgarage.com/images/EC%20Images/EC_Fig03.gif" title="PHY to Magnetics interface" ><span class='caption-text'>PHY to Magnetics interface</span></span></p>
 
 <h4>Signal Reception</h4>
 
@@ -1198,11 +1161,7 @@ RFA contains Receive Frame Descriptors, Receive Buffer Descriptors, and Data Buf
 Receive Frame Descriptors make up a Receive Descriptor List (RDL) used by the 82559 to store the destination and source
 addresses, the length field, and the status of each frame received.</p>
 
-<p>[caption id="attachment_355" align="alignnone" width="708" caption="Receive Frame Area"]<a
-href="http://hackerlabs.co/wp-content/uploads/2012/05/82559FlexibleReceiveStructure2.jpg"><img class="size-full
-wp-image-355" title="82559FlexibleReceiveStructure"
-src="http://hackerlabs.co/wp-content/uploads/2012/05/82559FlexibleReceiveStructure2.jpg" alt="" width="708" height="523"
-/></a>[/caption]</p>
+<p><span class='caption-wrapper'><img src="/images/from-bits-to-waves/82559FlexibleReceiveStructure.jpg" title="Flexible Receive Structure" ><span class='caption-text'>Flexible Receive Structure</span></span></p>
 
 <p>82559 checks each passing frame for an address match. The 82559 will recognize its own unique address, one or more
 multicast addresses, or the broadcast address. If a match is found, 82559 stores the destination address, source
@@ -1380,34 +1339,6 @@ Ethernet Controller Family Open Source Manual </a></li>
 target="_blank">eepro100.c Linux Device Driver</a></li>
 </ul>
 
-
-<p><div><script src='https://gist.github.com/1059334.js?file=usage.scss'></script>
-<noscript><pre><code>// Draw a list style image in svg using the radius and color specified.
-@mixin colored-bullet($radius, $color, $type: disc) {
-  list-style-type: $type;
-  list-style-image: svg-circle($radius, $color, $type);
-}
-
-
-ul {
-  @include colored-bullet(2px, $green, disc);
-  ul {
-    @include colored-bullet(2px, $green, circle);
-  }
-}
-</code></pre></noscript></div>
-</p>
-
-<p><div><script src='https://gist.github.com/996818.js?file='></script>
-<noscript><pre><code>@@ -590,7 +590,7 @@ class SpritesTest &lt; Test::Unit::TestCase
-  it &quot;should generate a sprite from nested folders&quot; do
-    css = render &lt;&lt;-SCSS
--     @import &quot;nested/*.png&quot;;
-+     @import &quot;nested/**/*.png&quot;;
-      @include all-nested-sprites;
-    SCSS
-    assert_correct css, &lt;&lt;-CSS</code></pre></noscript></div>
-</p>
 ]]></content>
   </entry>
   

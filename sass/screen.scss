@@ -359,7 +359,7 @@ textarea {
 input:valid, textarea:valid {}
 
 input:invalid, textarea:invalid {
-  background-color: #f0dddd; }
+  /*background-color: #f0dddd; */}
 
 /* =============================================================================
    Tables
@@ -576,7 +576,7 @@ section#cover {
 
 figure#user_logo div.logo {
   background-color: #88ACDB;
-  background: url("http://mysterious.s3.amazonaws.com/bolt_large.png") no-repeat scroll center center black;
+  //background: url("http://mysterious.s3.amazonaws.com/bolt_large.png") no-repeat scroll center center black;
   border: 2px solid #FFFFFF;
   border-radius: 50% 50% 50% 50%;
   height: 80px;
@@ -588,14 +588,14 @@ figure#user_logo div.logo {
   width: 80px;
   background-size: 100% auto;
   background-color: #fff;
-  background-image: url("http://hackerlabs.co/wp-content/themes/svbtle/images/HackerLabsQR-blue.png"); }
+  background-image: url("/images/HackerLabsQR-blue.png"); }
 
 /*figure#user_logo div.logo, article a.kudos.completed div.circle div.filled, figure#cover_logo { background-image: url("http://mysterious.s3.amazonaws.com/flask_large.png"); }*/
 /*figure#user_logo div.logo, article a.kudos.completed div.circle div.filled, figure#cover_logo { background-color: #e6f2a2; background-image: url("http://unitag.fr/qrcode/generate?q=8WzHjjCKe8g0nCHhbwZeYWNJt5CV-uzF_qjl4wWmJiAWK-RkGC-XJbN7heGGvxIei7n2Emx6K-wEZVumlfF_zUsK6AQ02IGi9eNKqyzQ6Mgk3HSbpQJAv592RNS-EbKGpg9SYe4K2_rPV603J21rG3KFWtvOL64Ag8YWgLRMLdRzt-GPQCHos8OujwLXbPrY"); }*/
 
 article a.kudos.completed div.circle div.filled, figure#cover_logo {
   background-color: #fff;
-  background-image: url("http://hackerlabs.co/wp-content/themes/svbtle/images/HackerLabsQR-blue.png"); }
+  background-image: url("/images/HackerLabsQR-blue.png"); }
 
 .blog-header-logo {
   width: 200px;
@@ -652,7 +652,7 @@ a.back-to-blog {
   padding: 50px 50px; }
 
 .dsq-comment-header {
-  background: url("") repeat-x scroll 0 0 transparent !important;
+  background: url("/images/spacer.gif") repeat-x scroll 0 0 transparent !important;
   border: 0px solid #fff!important;
   background-color: #fff; }
 
@@ -664,7 +664,7 @@ a.back-to-blog {
   padding-left: 10px!important; }
 
 .btn-group, .dsq-button, .dsq-button-small, .dsq-comment-footer-reply-tab, .dsq-global-toolbar-dropdown-container, .dsq-admin-settings, .dsq-community-box, .dsq-messages {
-  background: url("") repeat-x scroll 0 0 transparent !important;
+  background: url("/images/spacer.gif") repeat-x scroll 0 0 transparent !important;
   background-color: #000!important;
   color: #fff!important;
   padding: 10px!important;
@@ -863,23 +863,29 @@ em {
 
 header .social a {
   &.twitter {
-    background: url("http://justcramer.com/images/twitter.png?1335336011") no-repeat scroll center center #55cff8;
+    //background: url("http://justcramer.com/images/twitter.png?1335336011") no-repeat scroll center center #55cff8;
+    background: url("/images/icons/twitter.png") no-repeat scroll center center #55cff8;
     border: 1px solid #55CFF8; }
   &.github {
-    background: url("http://justcramer.com/images/github.png?1335336011") no-repeat scroll center center #afb6ca;
+    //background: url("http://justcramer.com/images/github.png?1335336011") no-repeat scroll center center #afb6ca;
+    background: url("/images/icons/github.png") no-repeat scroll center center #afb6ca;
     border: 1px solid #AFB6CA; }
   &.rss {
-    background: url("http://justcramer.com/images/rss.png?1335336011") no-repeat scroll center center #ef7522;
+    //background: url("http://justcramer.com/images/rss.png?1335336011") no-repeat scroll center center #ef7522;
+    background: url("/images/icons/rss.png") no-repeat scroll center center #ef7522;
     border: 1px solid #EF7522; }
   &.contact {
     background-color: #90A935;
+    //background: url("http://cdn1.iconfinder.com/data/icons/opensourceicons/32/email.png") no-repeat scroll center center #90A935;
+    //background-size:24px 24px;
     color: #fff;
     border: 1px solid #90A935;
     font-weight: bold;
     font-size: 18px;
     text-indent: 4px; }
   &.search {
-    background: url("http://justcramer.com/images/search.png?1335336011") no-repeat scroll center center #C0143C;
+    //background: url("http://justcramer.com/images/search.png?1335336011") no-repeat scroll center center #C0143C;
+    background: url("/images/icons/search.png") no-repeat scroll center center #C0143C;
     border: 1px solid #C0143C; }
   &:hover {
     opacity: 1; }
@@ -1038,12 +1044,30 @@ header .social a {
 .alignright {
   float: right; }
 
-.wp-caption {
-  border: 0px solid #666;
+.caption-wrapper {
+  display: inline-block;
+  margin: 10px;
+  /*border: 0px solid #666;
   text-align: center;
   background: #fff;
   padding: 10px;
-  margin: 10px; }
+  margin: 10px;*/ }
+
+.caption-text {
+   padding-top: 5px;
+   background: white;
+   text-align: center;
+   font-size: .8em;
+   text-transform: uppercase;
+   color: #666;
+   display: block; }
+
+.profile-picture {
+   padding: 10px 10px 10px 0;
+   float: left;
+   width: 100px!important;
+   height: 100px!important;
+}
 
 /* You might find the following useful */
                                                                       /* div, ul, li { position:relative } This will save you having to declare each div / ul / li's position as 'relative' and allows you to absolutely position elements inside them
@@ -1274,7 +1298,7 @@ ul#magic_bar li.photo {
 }
 
 form input.st-search-input {
-    background: url("") no-repeat scroll 14px 14px #EEEEEE!important;
+    background: url("/images/spacer.gif") no-repeat scroll 14px 14px #EEEEEE!important;
     border: 0px solid #CCCCCC!important;
     //border-left: 10px solid #C0143C!important;
     //border-right: 10px solid #C0143C!important;
@@ -1381,13 +1405,16 @@ div.st-result .st-date {
 
 .search a {
   &.twitter {
-    background: url("http://justcramer.com/images/twitter.png?1335336011") no-repeat scroll center center #55cff8;
+    //background: url("http://justcramer.com/images/twitter.png?1335336011") no-repeat scroll center center #55cff8;
+    background: url("/images/icons/twitter.png") no-repeat scroll center center #55cff8;
     border: 1px solid #55CFF8; }
   &.github {
-    background: url("http://justcramer.com/images/github.png?1335336011") no-repeat scroll center center #afb6ca;
+    //background: url("http://justcramer.com/images/github.png?1335336011") no-repeat scroll center center #afb6ca;
+    background: url("/images/icons/github.png") no-repeat scroll center center #afb6ca;
     border: 1px solid #AFB6CA; }
   &.rss {
-    background: url("http://justcramer.com/images/rss.png?1335336011") no-repeat scroll center center #ef7522;
+    //background: url("http://justcramer.com/images/rss.png?1335336011") no-repeat scroll center center #ef7522;
+    background: url("/images/icons/rss.png") no-repeat scroll center center #ef7522;
     border: 1px solid #EF7522; }
   &.contact {
     background-color: #90A935;
@@ -1400,6 +1427,7 @@ div.st-result .st-date {
     /*background: url("http://justcramer.com/images/search.png?1335336011") no-repeat scroll center center #C0143C;*/
     background: url("http://findicons.com/files//icons/2170/kailoon/32/search.png") no-repeat scroll center center #C0143C;
     background: url("http://png-1.findicons.com/files//icons/2315/default_icon/16/search_inv.png") no-repeat scroll center center #C0143C;
+    background: url("/images/icons/search.png") no-repeat scroll center center #C0143C;
     //background-size:16px 16px;
     border: 1px solid #C0143C; }
   &:hover {
@@ -1417,7 +1445,7 @@ div.st-result .st-date {
   width: 28px; }
 
 #thread-votes {
-  background: url("") repeat-x scroll 0 0 transparent !important;
+  background: url("/images/spacer.gif") repeat-x scroll 0 0 transparent !important;
   background-color: #000!important;
   color: #fff!important;
   padding: 10px!important;
@@ -1428,3 +1456,60 @@ div.st-result .st-date {
   text-transform: uppercase; }
 
 .alert.info { display: none!important; }
+
+#contact-form {
+   padding: 20px;
+}
+
+header#header.info {
+   padding: 10px 0px;
+   margin: 10px 0px;
+   display: none!important;
+}
+
+.HackerLabs-Contact-Message {
+   padding-top: 50px;
+}
+
+.HackerLabs-Contact-Email .desc, .HackerLabs-Contact-Name .desc, .HackerLabs-Contact-Message .desc {
+   width: 200px!important;
+}
+
+.HackerLabs-Contact-Email input, .HackerLabs-Contact-Name input, .HackerLabs-Contact-Message textarea {
+   border: 0px solid #ccc;
+   background-image: url("/images/spacer.gif");
+   border-left: 5px solid #0084ca;
+   margin: 5px 10px;
+   padding: 5px 10px;
+}
+
+.HackerLabs-Contact-Email input:focus, .HackerLabs-Contact-Name input:focus, .HackerLabs-Contact-Message textarea:focus {
+   border: 1px solid #fff!important;
+   border-left: 5px solid #0084ca!important;
+   border-right: 5px solid #0084ca!important;
+}
+
+.buttons {
+   padding-top: 40px!important;
+   text-align: left !important;
+   padding-left: 0px !important;
+}
+
+.buttons div {
+   margin-left: 10px !important;
+}
+
+#saveForm, .btTxt {
+  background: url("/images/spacer.gif") repeat-x scroll 0 0 transparent !important;
+  background-color: #000!important;
+  color: #fff!important;
+  padding: 10px!important;
+  border: 1px solid #000!important;
+  border-radius: 5px!important;
+  -moz-border-radius: 5px!important;
+  -webkit-border-radius: 5px!important;
+  text-transform: uppercase; }
+
+.power {
+   display: none!important
+}

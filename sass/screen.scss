@@ -87,6 +87,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-family: sans-serif;
+  height: 100%;
   color: #222; }
 
 button, input, select, textarea {
@@ -97,6 +98,7 @@ body {
   font: 300 26px / 36px "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   font-size: 1em;
+  height: 100%;
   line-height: 1.4; }
 
 /*
@@ -403,6 +405,7 @@ a {
     color: #0184ca; } }
 
 #wrap {
+  height: 100%;
   border-right: 1px solid #e2e2e2; }
 
 header {
@@ -421,6 +424,7 @@ h1, h2, h3, h4, h5 {
 
 #content {
   margin-left: 250px;
+  min-height: 100%;
   border-left: 1px solid #e2e2e2; }
 
 article {
@@ -867,12 +871,16 @@ em {
 header .social a {
   &.twitter {
     //background: url("http://justcramer.com/images/twitter.png?1335336011") no-repeat scroll center center #55cff8;
-    background: url("/images/icons/twitter.png") no-repeat scroll center center #55cff8;
-    border: 1px solid #55CFF8; }
+    background: url("/images/icons/twitter.png") no-repeat scroll center center #33CCFF;
+    border: 1px solid #33CCFF; }
   &.github {
     //background: url("http://justcramer.com/images/github.png?1335336011") no-repeat scroll center center #afb6ca;
-    background: url("/images/icons/github.png") no-repeat scroll center center #afb6ca;
-    border: 1px solid #AFB6CA; }
+    background: url("/images/icons/github.png") no-repeat scroll center center #3b3b3b;
+    border: 1px solid #3b3b3b; }
+  &.moreinfo {
+    //background: url("http://justcramer.com/images/rss.png?1335336011") no-repeat scroll center center #ef7522;
+    background: url("/images/icons/info.png") no-repeat scroll center center #7A3E48;
+    border: 1px solid #7A3E48; }
   &.rss {
     //background: url("http://justcramer.com/images/rss.png?1335336011") no-repeat scroll center center #ef7522;
     background: url("/images/icons/rss.png") no-repeat scroll center center #ef7522;

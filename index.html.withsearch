@@ -171,7 +171,7 @@ jQuery('#st-search-input').swiftypeSearch({
 
 <article style="border-left: 10px solid #C0143C; padding: 3em 50px">
 <h2> Welcome to Hacker Labs.  </h2>
-<p>I am a software engineer working for one the best search companies. Hacker labs is my playground where I experiment with the latest innovations, technologies and products that fascinates me. You can view some of my work, hacks and blog here.<p>
+<p>My name is Deepak Kandepet. I am a software engineer working for one the best search companies. Hacker labs is my playground where I experiment and write about the latest innovations, technologies and products that fascinates me. You can view some of my work, hacks and writings here.<p>
 
 <a class="continue" href="/about/">More →</a>
 </article>

@@ -10,6 +10,8 @@ categories:
 - Digital Self
 - Entropy
 - Information
+keywords: "Entropy, entropy of information, browser identity, Deepak Kandepet, Kandepet"
+description: "Every fact you learn about a person reduces the entropy of their identity. Find out how information gathered from your browser can uniquely identify you"
 ---
 
 Every fact you learn about a person reduces the "entropy" of their identity. For e.g.
@@ -19,13 +21,13 @@ Every fact you learn about a person reduces the "entropy" of their identity. For
 
 
 
-	
+
   * If I know your gender, we can eliminate about 50% of the population: There were about 155.6 million females & 151.4 million males in the United States in 2009.
 
-	
+
   * If I know your birthday we can eliminate a much larger percentage of the population: At age 85 and older, there were more than twice as many women as men. People under 20 years of age made up over a quarter of the U.S. population (27.3%), and people age 65 and over made up one-eighth (12.8%) in 2009.
 
-	
+
   * We can narrow you down even more if we know your zip code
 
 

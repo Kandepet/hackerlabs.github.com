@@ -1,16 +1,20 @@
 ---
 layout: page
-title: "about"
+title: "About Deepak Kandepet & Hacker Labs"
 date: 2012-05-07 23:10
 comments: true
 sharing: true
 footer: true
+keywords: "Hacker Labs, hackerlabs, Deepak Kandepet, kandepet, svbtle for octopress"
+description: "My name is Deepak Kandepet. Hacker Labs is my playground where I have fun with the latest innovations, products and technologies from around the web."
 ---
 
 # Welcome to Hacker Labs.
 
 {% img profile-picture /images/MeCartoonized.png 100 100 %}
 My name is Deepak Kandepet. Hacker Labs is my playground where I have fun with the latest innovations, products and technologies from around the web. I am a search engineer by profession, working for one of the best search engine companies, but I am a full-stack engineer and I love to dabble with everything from Linux drivers, Linux kernel, TCP/IP stack, high performance programming and especially love web-programming and spend most of my non-work hours dabbling in something related to it.
+
+I also hold an Amateur Radio License and occassionally you can see me hamming with the KJ6VWB call sign.
 
 I am also an entrepreneur in the making and co-founded couple of companies : [prep.ly](http://prep.ly "prep.ly"),  [samefeather.com](http://samefeather.com),  [trendwars.com](trendwars.com).
 

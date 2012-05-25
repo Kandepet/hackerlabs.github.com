@@ -10,6 +10,8 @@ categories:
 - Hobby
 - Puzzles
 - Rubiks cube
+keywords: "rubik's cube solution, rubik's cube, God's number, Deepak Kandepet, Kandepet"
+description: "Steps to solve the rubik's cube. Without using magic or trickery, God would need utmost 20 moves to solve any scrambled 3 x 3 x 3 Rubiks cube. The best I can do is in 67 moves."
 ---
 
 > Without using magic or trickery, God would need utmost [20](http://cube20.org/) moves to solve any scrambled 3 x 3 x 3 Rubik's cube. The best I can do is in 67 moves.
@@ -18,9 +20,9 @@ categories:
 
 I got my first Rubik's cube when I was 11 years old. After years of trying to solve it, my greatest accomplishment was solving 2 adjacent faces. I would give up trying to solve the entire cube after fiddling with it for hours. I was still proud of what I could solve though; every one else I knew could not even solve 1 face.
 
-God's number is the smallest number of moves it takes to solve a general Rubik's cube. In the case of the familiar 3x3x3 cube it was proved that 20 moves are always enough to solve even the hardest scramble. Finding this result took 35 years of computer time for researchers in Google. We still don't know the size of God's number for any cube other than the standard 3x3x3 but we do now know how it varies with the size of the cube. The remarkable thing is that it gets easier as the cube gets bigger. 
+God's number is the smallest number of moves it takes to solve a general Rubik's cube. In the case of the familiar 3x3x3 cube it was proved that 20 moves are always enough to solve even the hardest scramble. Finding this result took 35 years of computer time for researchers in Google. We still don't know the size of God's number for any cube other than the standard 3x3x3 but we do now know how it varies with the size of the cube. The remarkable thing is that it gets easier as the cube gets bigger.
 
-There is now an answer to this question in a [paper](http://arxiv.org/abs/1106.5736) to be presented at the 19th Annual European Symposium on Algorithms. 
+There is now an answer to this question in a [paper](http://arxiv.org/abs/1106.5736) to be presented at the 19th Annual European Symposium on Algorithms.
 
 This paper shows that using a dumb approach to solving a nxnxn problem is to perform a set of moves that places a single sub-cube in its correct position and repeat until all the faces are complete. This gives an upper bound of order n^2. However, it is well known that you can usually do better by using moves that place multiple sub-cubes into their correct location. These heuristics have now been made formal and this resulted in order n^2/logn being the new upper bound. Now this has also been shown to be the lower bound in the same paper. What this means is that the smallest number of moves required to solve the nxnxn Rubik's cube is proportional to n^2/log(n). Notice that this result doesn't tell us God's Number for a cube of any size, only that it is proportional to n^2/log(n).
 
@@ -43,14 +45,14 @@ Hints:
 
 
 
-	
+
   * Before you start each move, make sure your thumbs are on the F side of the cube to ensure consistent orientation for all the sequences.
 
-	
+
   * To turn a face in the right direction, imagine that you are facing that side of the cube before making the turn.
 
-        
-  * If you mess up along the way, just restart from Step 1. 
+
+  * If you mess up along the way, just restart from Step 1.
 
 
 
@@ -110,7 +112,7 @@ After
 #### STEP 2: Solve the Orange Corners
 
 
-Find a corner piece in the bottom layer that belongs on top. Turn the bottom layer until the piece is directly below its home in the top layer. Hold the cube with the piece on the lower-front-right and its home at the upper-front-right and then do the sequence Ri Di R D 1, 3, or 5 times until that corner is solved. 
+Find a corner piece in the bottom layer that belongs on top. Turn the bottom layer until the piece is directly below its home in the top layer. Hold the cube with the piece on the lower-front-right and its home at the upper-front-right and then do the sequence Ri Di R D 1, 3, or 5 times until that corner is solved.
 If you find a corner piece that's already in the top layer but the wrong spot or flipped the wrong way, hold the cube with the piece in the upper-front-right position and do Ri Di R D once. Now the piece is on the bottom and ready to be solved using the Ri Di R D sequence.
 
 
@@ -133,7 +135,7 @@ Before
 
 
 
-**Ri Di R D  
+**Ri Di R D
 (x1, 3 or 5)**
 
 
@@ -432,9 +434,9 @@ This is it, the final step in solving the puzzle! This step is just a little bit
 
 Keeping the unsolved layer on top, rotate the cube until you find a corner piece that needs to be flipped (i.e., top color does not match top layer). Position that corner in the upper-front-right corner. From now on, you need to keep the cube in this orientation. Remember the color of the front center piece, and make sure to keep that piece in the front position from now on.
 
-Do the sequence Ri Di R D 2 or 4 times to orient the selected corner piece. The cube will get scrambled in the process, but don't worry. 
+Do the sequence Ri Di R D 2 or 4 times to orient the selected corner piece. The cube will get scrambled in the process, but don't worry.
 
-Next, rotate the top layer clockwise, until you find another corner that needs to be flipped. Repeat the sequence until all the corners are oriented properly. 
+Next, rotate the top layer clockwise, until you find another corner that needs to be flipped. Repeat the sequence until all the corners are oriented properly.
 
 
 
@@ -461,7 +463,7 @@ Before
 
 
 
-**Ri Di R D**   
+**Ri Di R D**
 (x2 or 4)
 
 
@@ -485,7 +487,7 @@ After
 
 
 
-Congratulations, your cube is solved. 
+Congratulations, your cube is solved.
 
 
 ### Sources

@@ -9,6 +9,8 @@ comments: true
 categories:
 - Internals
 - Search
+keywords: "open source search, Lucene internals, Lucene index, Lucene search, Deepak Kandepet, kandepet"
+description: "Learn the internal data representation and index format of Lucene. "
 ---
 
 Lucene is high-performance, scalable, full-featured, open-source text search engine written in Java. Since I am a search engineer by profession, I wanted to learn more about Lucene and its internals.
@@ -27,44 +29,44 @@ This article is about the index format of the 3.4 Lucene. Specifically the Lucen
 
 
 
-	
+
   * **Index:** An Index is basically a set of documents that are to be searched. The index may be composed of multiple sub-indexes, or segments. Each segment is a fully independent index, which could be searched separately.
 
-	
+
   * **Fields:** When a document is added to an index, different sections of the document are identified and are given common names called fields. e.g. Document title, document body, hyperlinks, the document URL, etc.
 
-	
+
   * **Terms:** The words in the fields are extracted and are stored in the index as terms. A term is basically a string extracted from the document.
 
 
-	
+
     * The same string in two different fields is considered a different term.
 
-	
+
     * Terms are represented as a pair of strings, the first naming the field, and the second naming text within the field.
 
-	
+
     * **Stored/Indexed**:
 
 
-	
+
       * In Lucene, fields may be _stored_, in which case their text is stored in the index literally, in a non-inverted manner.
 
-	
+
       * Fields that are inverted are called _indexed_.
 
-	
+
       * A field may be both stored and indexed.
 
 
-	
+
     * **Tokenized/Non-Tokenized** :
 
 
-	
+
       * The text of a field may be _tokenized_ into terms to be indexed, or the text of a field may be used literally as a term to be indexed.
 
-	
+
       * Most fields are tokenized, but sometimes it is useful for certain identifier fields to be indexed literally.
 
 
@@ -100,10 +102,10 @@ Stored fields are the original raw text values that were given to Lucene.  This
 
 
 
-	
+
   1. The field index, or .fdx file. This contains, for each document, a pointer to its field data.
 
-	
+
   2. The field data, or .fdt file. This contains the stored fields of each document.
 
 
@@ -187,19 +189,19 @@ If omitTf were true it would be this sequence of VInts instead: 7,4.  If we omi
 
 
 
-	
+
   * Number of skip levels in the SkipData = NumSkipLevels = Min (MaxSkipLevels, floor (log (DocFreq / log (SkipInterval )))). DocFreq = DocCount that contains this term.
 
-	
+
   * Number of nodes in each skip level = DocFreq / (SkipInterval ^ (Level + 1)), level >= 0
 
-	
+
   * All the SkipLevels are appended together, preceded by a SkipLevelLength. The last level does not need a SkipLevelLength since there are no more levels below it, so it is skipped.
 
-	
+
   * All SkipDatum in all levels, except the last level have a SkipChildLevelPtr which points to the next skip level.
 
-	
+
   * Each SkipDatum (SkipNode) contains the following information: document number, payload length, FreqSkip, ProxSkip, SkipChildLevelPtr.
 
 

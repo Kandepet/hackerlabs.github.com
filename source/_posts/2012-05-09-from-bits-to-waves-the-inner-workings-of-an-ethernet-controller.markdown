@@ -5,6 +5,8 @@ date: 2012-05-09 06:57
 comments: true
 categories:
 - Internals
+keywords: "Linux network driver, eepro100, Intel 82559, 8255x, Linux Ethernet Driver internals, Deepak Kandepet, Kandepet"
+description: "Understand the internals of an Ethernet driver and how it interfaces with the linkx kernel on one side and the network on the other side"
 ---
 About 10 years ago, I started hacking the Linux kernel. My interest was the TCP/IP stack and specifically the workings
 of an Ethernet controller and its Linux driver. I picked one of the most widely used Ethernet controllers at that time,

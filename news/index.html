@@ -7,15 +7,21 @@
 <!--[if (gt IE 9)|!(IE)]><!--><html dir="ltr" lang="en-US" class="no-js"><!--<![endif]-->
     <head>
         <meta charset="UTF-8" />
-  <title>How big of a haystack do you need to hide? - Hacker Labs</title>
+  <title>news - Hacker Labs</title>
   <meta name="author" content="Deepak Kandepet">
 
   
-  <meta name="description" content="Every fact you learn about a person reduces the entropy of their identity. Find out how information gathered from your browser can uniquely identify &hellip;">
-  <meta name="keywords" content="Entropy, entropy of information, browser identity, Deepak Kandepet, Kandepet">
+  <meta name="description" content="Search Home
+About us
+Services
+Portfolio
+News
+Contact &#8220;Simplicity is the ultimate sophistication&#8221;- Leonardo da Vinci
+Lorem ipsum dolor &hellip;">
+  
 
   
-  <link rel="canonical" href="http://HackerLabs.github.com/blog/2011/08/04/how-big-of-a-haystack-do-you-need-to-hide">
+  <link rel="canonical" href="http://HackerLabs.github.com/news">
 
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -131,9 +137,9 @@ h6 { font-family: 'Arvo', arial, serif; }
         <article id="post-47" class="post-47 post type-post status-publish format-standard hentry category-digital-self category-entropy category-information">
             
 
+
 <article id="post-47" class="post-47 post type-post status-publish format-standard hentry category-digital-self category-entropy category-information">
-  <div class="entry-meta" >
-    <!--<span class="entry-date">August 4 2011</span>-->
+  <!--<div class="entry-meta" >
     <div class="search alignright">
         <a class="search" href="/search/" title="search">Search</a>
     </div>
@@ -150,85 +156,82 @@ h6 { font-family: 'Arvo', arial, serif; }
 
 
 
-<span class="entry-date"  datetime="2011-08-04T18:13:17+00:00" pubdate data-updated="true">Aug 4<span>th</span>, 2011</span>
+<span class="entry-date"  datetime="2012-06-12T00:25:00+00:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</span>
     
 </div>
+ -->
 
-<h1 class="entry-title">How Big of a Haystack Do You Need to Hide?</h1>
 
-<div class="entry-content"><p>Every fact you learn about a person reduces the &#8220;entropy&#8221; of their identity. For e.g.</p>
 
+<div class="entry-content">
+    <div class="search alignright">
+        <a class="search" href="/search/" title="search">Search</a>
+    </div>
+   <div class="bg">
+<div id="container">
+
+<header id="newsmenu">
+<nav>
 <ul>
-<li><p>If I know your gender, we can eliminate about 50% of the population: There were about 155.6 million females &amp; 151.4 million males in the United States in 2009.</p></li>
-<li><p>If I know your birthday we can eliminate a much larger percentage of the population: At age 85 and older, there were more than twice as many women as men. People under 20 years of age made up over a quarter of the U.S. population (27.3%), and people age 65 and over made up one-eighth (12.8%) in 2009.</p></li>
-<li><p>We can narrow you down even more if we know your zip code</p></li>
+<li><a href="#" class="current">Home</a></li>
+<li><a href="#">About us</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">News</a></li>
+<li><a href="#">Contact</a></li>
 </ul>
+</nav>
+</header>
 
-
-<p>Each of these facts independently narrow down the population, so much so that the combination of gender, ZIP code, birth date was <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.91.4147&amp;rep=rep1&amp;type=pdf">unique for about 63% of the U.S</a>. population.</p>
-
-<h3>Lets see how this works:</h3>
-
-<p>Every time we learn a new fact about a person, there is less uncertainty about that person. Remember, entropy is a measure of this uncertainty. When we learn a new fact about a person, that fact reduces the entropy of their identity by a certain amount. There is a formula to say how much:</p>
-
-<p>ΔS = -ln Pr(X=x)</p>
-
-<p>Where ΔS is the reduction in entropy, measured in bits and Pr(X=x) is simply the probability that the fact would be true of a random person. Let&#8217;s apply the formula to a few facts, just for fun:</p>
-
-<p>Starsign: ΔS = -ln Pr(STARSIGN=capricorn) = -ln (1/12) = 3.58 bits of information
-Birthday: ΔS = -ln Pr(DOB=2nd of January) = -ln (1/365) = 8.51 bits of information</p>
-
-<p>In the examples above, each starsign and birthday was assumed to be equally likely. The calculation can also be applied to facts which have non-uniform likelihoods. For instance, the likelihood that an unknown person&#8217;s ZIP code is 90210 (Beverley Hills, California) is different to the likelihood that their ZIP code would be 40203 (part of Louisville, Kentucky). As of 2007, there were 21,733 people living in the 90210 area, only 452 in 40203, and around 6.625 billion on the planet.</p>
-
-<p>Knowing my ZIP code is 90210: ΔS = -ln (21,733/6,625,000,000) = 18.21 bits
-Knowing my ZIP code is 40203: ΔS = -ln (452/6,625,000,000) = 23.81 bits
-Knowing that I live in Moscow: ΔS = -ln (10524400/6,625,000,000) = 9.30 bits</p>
-
-<p>How much entropy is needed to identify someone?</p>
-
-<p>As of 2007, identifying someone from the entire population of the planet required:</p>
-
-<p>S = ln (1/6625000000) = 32.6 bits of information.</p>
-
-<p>Conservatively, we can round that up to 33 bits.</p>
-
-<p>So for instance, if we know someone&#8217;s birthday, and we know their ZIP code is 40203, we have 8.51 + 23.81 = 32.32 bits; that&#8217;s almost, but perhaps not quite, enough to know who they are: there might be a couple of people who share those characteristics. Add in their gender, that&#8217;s 33.32 bits, and we can probably say exactly who the person is.</p>
-
-<p>So, in the end if we are all just 33 bits, This is me: 000000010101101101000010101001111</p>
-
-<p>P.S. Challenge: Decode this:  000000010101101101000010101001111</p>
+<section id="intro">
+<hgroup>
+<h1>&#8220;Simplicity is the ultimate sophistication&#8221;<span>- Leonardo da Vinci</span></h1>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin.
+Vestibulum condimentum  facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.</p>
+</hgroup>
+</section>
+<div class="holder_content">
+<section class="group1">
+<h3>About us</h3>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin.
+Vestibulum condimentum  facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy.</p>
+<a class="photo_hover3" href="#"><img src="http://freehtml5templates.com/downloads/free/minimalism/images/picture1.jpg" width="240" height="214" alt="picture1"/></a>
+<a class="continue">Read More</a>
+</section>
+<section class="group2">
+<h3>Services</h3>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin.
+Vestibulum condimentum  facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy.</p>
+<a class="photo_hover3" href="#"><img src="http://freehtml5templates.com/downloads/free/minimalism/images/picture2.jpg" width="240" height="214" alt="picture1"/></a>
+<a class="continue">Read More</a>
+</section>
+<section class="group2">
+<h3>Latest news</h3>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin.
+Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy.   </p>
+<a class="photo_hover3" href="#"><img src="http://freehtml5templates.com/downloads/free/minimalism/images/picture3.jpg" width="240" height="214" alt="picture1"/></a>
+<a class="continue">Read More</a>
+</section>
 </div>
 
-  <footer>
-    <p class="meta">
-        <a class="basic-alignment left" href="/" title="Back to Blog">←&nbsp; Back to blog</a>
-    </p>
-    </footer>
+<div class="holder_content">
+<section class="group4">
+<h3>Latest article</h3>
+<article>
+<h4>22.08.2011  - Design to express </h4>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst.</p>
+</article>
+</section>
+</div>
+</div>
+</div>
+
+
+</div>
 
 </article>
-<comments>
-  
-  <div id="disqus_thread" aria-live="polite">
-
-<script type="text/javascript">
-      var disqus_shortname = 'hackerlabs';
-      
-        
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://HackerLabs.github.com/blog/2011/08/04/how-big-of-a-haystack-do-you-need-to-hide/';
-        var disqus_url = 'http://HackerLabs.github.com/blog/2011/08/04/how-big-of-a-haystack-do-you-need-to-hide/';
-        var disqus_script = 'embed.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-</div>
-  
-</comments>
 
         </article><!-- #post-## -->
         </section><!-- #main -->

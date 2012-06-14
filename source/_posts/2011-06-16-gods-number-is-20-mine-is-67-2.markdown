@@ -1,6 +1,7 @@
 ---
 date: '2011-06-16 17:01:44'
 layout: post
+type: blog
 slug: gods-number-is-20-mine-is-67-2
 status: publish
 title: God's number is 20, mine is 67.

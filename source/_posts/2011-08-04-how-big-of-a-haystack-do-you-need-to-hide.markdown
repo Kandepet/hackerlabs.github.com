@@ -1,6 +1,7 @@
 ---
 date: '2011-08-04 18:13:17'
 layout: post
+type: blog
 slug: how-big-of-a-haystack-do-you-need-to-hide
 status: publish
 title: How big of a haystack do you need to hide?

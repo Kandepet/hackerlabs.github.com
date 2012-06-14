@@ -1,5 +1,6 @@
 ---
 layout: post
+type: blog
 title: "From bits to waves - The inner workings of an ethernet controller"
 date: 2012-05-09 06:57
 comments: true

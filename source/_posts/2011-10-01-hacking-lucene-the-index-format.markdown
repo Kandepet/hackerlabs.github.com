@@ -1,6 +1,7 @@
 ---
 date: '2011-10-01 00:20:54'
 layout: post
+type: blog
 slug: hacking-lucene-the-index-format
 status: publish
 title: Hacking Lucene - The Index format

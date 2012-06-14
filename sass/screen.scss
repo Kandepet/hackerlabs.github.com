@@ -15,6 +15,7 @@ $noise-bg: image-url('noise.png') top left !default;
 //@import "partials";
 @import "partials/syntax";
 
+/*
 @font-face {
     font-family: 'Lato';
     src: url(http://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
@@ -41,6 +42,70 @@ $noise-bg: image-url('noise.png') top left !default;
     src: url('http://fonts.googleapis.com/css?family=PT Sans:regular,italic,bold,bolditalic');
     font-weight: normal;
     font-style: normal;
+}
+
+*/
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oswald Bold'), local('Oswald-Bold'), url('http://themes.googleusercontent.com/static/fonts/oswald/v5/bH7276GfdCjMjApa_dkG6T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oswald Light'), local('Oswald-Light'), url('http://themes.googleusercontent.com/static/fonts/oswald/v5/HqHm7BVC_nzzTui2lzQTDT8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Oswald '), local('Oswald'), url('http://themes.googleusercontent.com/static/fonts/oswald/v5/-g5pDUSRgvxvOl5u-a_WHw.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Lora Bold'), local('Lora-Bold'), url('http://themes.googleusercontent.com/static/fonts/lora/v5/XpaepWHcooQHSRnzoohUng.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Lora'), url('http://themes.googleusercontent.com/static/fonts/lora/v5/5-AYViExptypIdFoLKAxTA.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: normal;
+  src: local('Lora Italic'), local('Lora-Italic'), url('http://themes.googleusercontent.com/static/fonts/lora/v5/wXeMvRh7Gui36p_I04Ex6g.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: bold;
+  src: local('Lora Bold Italic'), local('Lora-BoldItalic'), url('http://themes.googleusercontent.com/static/fonts/lora/v5/_IxjUs2lbQSu0MyFEAfa7T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cardo';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Cardo'), local('Cardo-Regular'), url('http://themes.googleusercontent.com/static/fonts/cardo/v5/zpisC4kGu76S5N9VhpMnEg.woff') format('woff');
+}
+@font-face {
+  font-family: 'Cardo';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Cardo Italic'), local('Cardo-Italic'), url('http://themes.googleusercontent.com/static/fonts/cardo/v5/0_g5QMQebQZw5ilITPZHDA.woff') format('woff');
+}
+@font-face {
+  font-family: 'Cardo';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Cardo Bold'), local('Cardo-Bold'), url('http://themes.googleusercontent.com/static/fonts/cardo/v5/gHC1KgRPdVNdvvVcxLMCY_esZW2xOQ-xsNqO47m55DA.woff') format('woff');
 }
 
 
@@ -95,11 +160,12 @@ button, input, select, textarea {
   color: #222; }
 
 body {
-  font: 300 26px / 36px "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  //font: 400 26px / 36px "Lora", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lora;
   margin: 0;
-  font-size: 1em;
+  font-size: 16px;
   height: 100%;
-  line-height: 1.4; }
+  line-height: 1.5625; }
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -209,7 +275,12 @@ sub {
 
 ul, ol {
   margin: 1em 0;
-  padding: 0 0 0 40px; }
+  padding: 0 0 0 40px;
+
+  li { margin: 5px 0px;
+  line-height: 1.7; }
+
+  }
 
 dd {
   margin: 0 0 0 40px; }
@@ -392,7 +463,7 @@ html {
   -webkit-font-smoothing: antialiased; }
 
 body {
-  font-size: 92%;
+  //font-size: 92%;
   color: #4D4D4D; }
 
 a {
@@ -415,11 +486,13 @@ header {
   color: #999;
   text-transform: uppercase;
   h1 a {
-    font: 300 26px / 36px "Arvo", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 300 26px / 36px "Oswald", "Arvo", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 36px;
     color: black; } }
 
 h1, h2, h3, h4, h5 {
-  font: 300 26px / 36px "Arvo", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 300 26px / 36px "Oswald", "Arvo", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 36px;
   color: black; }
 
 #content {
@@ -471,6 +544,7 @@ article .entry-content {
   padding-top: 40px;
   h1 { margin-top: 0px }
   p {
+    text-align: justify;
     line-height: 1.9em; }
   a {
     border-bottom: 1px solid #ccc;
@@ -489,7 +563,9 @@ frontpage-list {
     list-style-position: outside;
     list-style-type: none;
     padding: 0 0;
-    margin: 0 0; }
+    margin: 0 0;
+    li { margin: 0;}
+    }
   .frontpage-date {
     margin: 1em 0;
     display: inline-block;
@@ -557,6 +633,7 @@ article a.continue {
   p {
     color: #4D4D4D;
     text-transform: none;
+    font-family: 'Cardo';
     font-size: 16px;
     font-weight: 400; } }
 
@@ -1099,8 +1176,9 @@ li#theme-switcher {
 /* ----------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-  font: 300 26px / 36px "Arvo", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bold; }
+    font: 300 26px / 36px "Oswald", "Arvo", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 36px;
+  font-weight: normal; }
 
 /* This helps to identify headings at the initial build stage, so I thought it'd be useful to have it */
 
@@ -1526,4 +1604,272 @@ header#header.info {
 
 .power {
    display: none!important
+}
+
+/***************************************************
+	      minimalist by marija zaric
+	      template distributed by
+        http: //freehtml5templates.com
+***************************************************
+
+/***************************************************
+			    Main containers
+***************************************************/
+
+#container, #container_left, #container_right {
+	position: relative;
+	width: 100%;
+}
+
+#container {
+   padding-top: 20px;
+	position: relative;
+	//width: 980px;
+	//margin: 0 auto;
+	background-color: transparent;
+	min-height: 100%;
+}
+
+.group1 {
+	float: left;
+	width: 28%;
+	position: relative;
+	background: transparent;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+
+.group2 {
+	float: left;
+	width: 28%;
+	position: relative;
+	background: transparent;
+	padding: 15px;
+	margin-bottom: 10px;
+	margin-left: 30px;
+}
+
+.group3 {
+	//float: right;
+	width: 25%;
+	position: relative;
+	background: transparent;
+	padding: 15px;
+	}
+
+.group4 {
+	//float: left;
+	//width: 950px;
+	position: relative;
+	padding: 15px;
+	margin-top: -14px;
+	margin-bottom: 25px;
+	background: transparent;
+	border-top: 1px solid #A3A3A3;
+	-moz-column-count: 3; /* Firefox */
+	-webkit-column-count: 3; /* Safari and Chrome */
+	column-count: 3;
+	-moz-column-gap: 40px; /* Firefox */
+	-webkit-column-gap: 40px; /* Safari and Chrome */
+	column-gap: 40px;
+	-moz-column-rule: 1px solid #A3A3A3; /* Firefox */
+	-webkit-column-rule: 1px solid #A3A3A3; /* Safari and Chrome */
+	column-rule: 1px solid #A3A3A3;
+}
+
+#newsmenu {
+   display:none;
+	position: relative;
+	//float: left;
+	width: 100%;
+	height: 100px;
+}
+
+/***************************************************
+                 GALLERY
+***************************************************/
+
+a.photo_hover3 {
+   position: relative;
+   float: left;
+   margin: 16px 13px 8px 0;
+   padding: 8px;
+   background-color: white;
+   border: 1px solid #D6D6D6;
+}
+
+a.photo_hover3:hover {
+   border: 1px solid #D6D6D6;
+   background-color: transparent;
+   opacity: 0.9;
+   z-index: 1000;
+}
+
+a.photo_hover2 {
+   position: relative;
+   float: right;
+   margin: 5px 13px 8px 0;
+   padding: 8px;
+   background-color: white;
+   border: 1px solid #E1E1E1;
+}
+
+a.photo_hover2:hover {
+   border: 1px dotted #66CCFF;
+   background-color: #C7EDFF;
+   opacity: 0.9;
+   z-index: 1000;
+}
+
+
+
+/***************************************************
+				INTRO
+***************************************************/
+
+#intro {
+	//width: 980px;
+	position: relative;
+	//float: left;
+	height: 120px;
+	background: transparent;
+	margin-top: 25px;
+}
+
+/***************************************************
+				   HOLDERS
+***************************************************/
+
+.holder_content {
+	position: relative;
+        clear: both;
+	//float: left;
+        float: none;
+	width: 100%;
+	margin-top: 4px;
+	padding-top: 10px;
+}
+
+.holder_content_separator{
+	margin-bottom: 20px;
+}
+
+.container {
+   //width: 980px;
+   margin: 0 auto;
+   background-color: #33CC99;
+}
+
+/***************************************************
+				       MENU
+***************************************************/
+
+nav {
+	//position: absolute;
+	//width: 534px;
+	//top: 38px;
+	//left: 450px;
+        //float: right;
+	background: transparent;
+	border-top: 1px solid #A3A3A3;
+	border-bottom: 1px solid #A3A3A3;
+}
+
+nav ul li {
+	//float: left;
+	margin-left: 16px;
+	line-height: normal;
+}
+
+nav ul li a {
+	font-size: 20px;
+        //font-family: Arial, Helvetica, sans-serif;
+	color: #666666;
+	font-weight: normal;
+	display: block;	/* IE6, IE7 line height fix */
+	padding-bottom: 10px;
+	padding-top: 5px;
+	background-color: transparent;
+	margin-top: 5px;
+	margin-right: 6px;
+        text-decoration: none!important;
+}
+
+nav ul li a:hover {
+	color: #CC3333;
+}
+
+nav ul li a.current {
+	color: #CC3333;
+}
+
+.content_menu {
+	//float: left;
+	//width: 274px;
+	margin-top: -10px;
+	margin-bottom: 15px;
+}
+
+.content_menu ul {
+	margin: 0px;
+	padding: 0px;
+	//float: none;
+}
+
+.content_menu ul li {
+	//float: none;
+	padding-bottom: 16px;
+}
+
+
+.content_menu ul li a {
+	font-size: 14px;
+	line-height: normal;
+   color: #33CC99;
+	text-align: left;
+	text-decoration: none;
+	background-image: url(../images/circle.png);
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left: 20px;
+}
+
+.content_menu ul li a:hover {
+   color: #33CC99;
+}
+
+/***************************************************
+				   SPECIFIC
+***************************************************/
+
+.clearing {
+	clear: both;
+	display: inline;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+}
+
+.button {
+	width: 66px;
+	height: 13px;
+	position: relative;
+	margin-top: 12px;
+	padding: 9px;
+	background-color: black;
+	display: inline-block;
+	color: white;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 12px/100% Arial, Helvetica, sans-serif;
+}
+
+.button:hover {
+	background-color: #333333;
+}
+
+.button:active {
+	position: relative;
+	top: 1px;
 }

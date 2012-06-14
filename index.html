@@ -138,9 +138,11 @@ h6 { font-family: 'Arvo', arial, serif; }
         <a class="search" href="/search/" title="search">Search</a>
     </div>
 <h2> Welcome to Hacker Labs.  </h2>
-<p>My name is Deepak Kandepet. I am a software engineer working for one the best search companies. Hacker labs is my playground where I experiment and write about the latest innovations, technologies and products that fascinates me. You can view some of my work, hacks and writings here.<p>
+<p>My name is Deepak Kandepet. I am a software engineer working for one the best search companies. Hacker labs is my playground where I experiment and write about the latest innovations, technologies and products that fascinates me. You can view some of my work, hacks and writings here. <p>
 
 <a class="continue" href="/about/">More →</a>
+<a class="continue" href="/news/">NEWS </a>
+<a class="continue" href="/labs/">LABS </a>
 </article>
 
 <article id="post-0" style="padding: 0px 50px">
@@ -430,11 +432,13 @@ blockquote{margin:1em 1em 1em 2em;border-left:solid 1px #aaa;padding-left:1em;fo
 
 </style>
 
+
+
+
 <h3>FEATURED PROJECTS</h3>
-<a class="continue" href="/news/">NEWS </a>
             <div class="main">
                 <div class="view view-third">
-                    <img src="http://samefeather.net/mod/same_feather_theme/graphics/280_126logo_gimp3.jpg" style="top: 40px;left: 10px;"/>
+                    <img src="/images/SameFeatherLogo.jpg" style="top: 40px;left: 10px;"/>
                     <div class="mask">
                         <h2>Same Feather</h2>
                         <p>A local social network. Find and connect with people who share your interests in your neighborhood.</p>
@@ -442,7 +446,7 @@ blockquote{margin:1em 1em 1em 2em;border-left:solid 1px #aaa;padding-left:1em;fo
                     </div>
                 </div>
                <div class="view view-third">
-                    <img src="http://www.math.cornell.edu/~numb3rs/lipa/imgs/venn5.png" style="width:100%;height:100%;top:30px;left:35px"/>
+                    <img src="/images/TrendWarsLogo.png" style="width:100%;height:100%;top:30px;left:35px"/>
                     <div class="mask">
                         <h2>Trend Wars</h2>
                         <p>A game based on real-time twitter trending topics. Players recruit others and persuade them to tweet on their topic to win the game</p>
@@ -450,7 +454,7 @@ blockquote{margin:1em 1em 1em 2em;border-left:solid 1px #aaa;padding-left:1em;fo
                     </div>
                 </div>
                 <div class="view view-third">
-                    <img src="http://sg.sea.123rf.com/400wm/400/400/kgtoh/kgtoh1107/kgtoh110700610/10012041-background-concept-wordcloud-illustration-of-source-code-programming.jpg" style="width:100%;height:100%" />
+                    <img src="/images/PreplyIcon.jpg" style="width:100%;height:100%" />
                     <div class="mask">
                         <h2>Preply</h2>
                         <p>Coding interview preparation by practicing real interview questions. Timed mock interviews with realtime feedback of performance.</p>
@@ -463,63 +467,10 @@ blockquote{margin:1em 1em 1em 2em;border-left:solid 1px #aaa;padding-left:1em;fo
 
 
 
-             <h3> ALL HACKS & PROJECTS </h3>
-<div id="github-repos"></div>
-
-<script type='text/javascript'>
-$(function() {
-    $.getJSON('https://api.github.com/users/hackerlabs/repos?callback=?', function(resp) {
-        if (resp.data.length > 0) {
-            $('#github-repos').append('<ul class="stats"></ul>');
-
-            $.each($(resp.data).sort('pushed_at', 'desc'), function(i, val) {
-                $('#github-repos > ul').append(
-                    '<li class="icon"><a class="icon link external" href="'+val['html_url']+'">'+val['name']+'</a><p>'+((val['description']) ? val['description'] : '(No description.)')+'</p></li>'
-                );
-            });
-        }
-        else {
-            $('#github-repos').append('<p>No public repositories.</p>');
-        }
-    });
-});
-</script>
-
-
-
-<div class="github-widget" data-repo="hackerlabs"></div>
-<script type="text/javascript" src="https://raw.github.com/JoelSutherland/GitHub-jQuery-Repo-Widget/master/jquery.githubRepoWidget.js"></script>
-
-
-
-
-
-<article id="github-entry" class="link github javascript html">
-
-                <section class="meta">
-                  <ul class="stats">
-                    <li class="icon"><a class="icon link external" href="https://github.com/ccampbell/rainbow" target="_blank">View</a></li>
-
-                    <li><a href="http://thechangelog.com/post/24955440903/rainbow-simple-syntax-highlighting-library-written-in-ja#notes" class="notes">15</a></li>
-
-                  </ul>
-                </section>
-                <p><a href="http://thechangelog.com/post/24955440903/rainbow-simple-syntax-highlighting-library-written-in-ja" class="link">Rainbow - Simple syntax highlighting library written in&nbsp;JavaScript</a></p>
-                <section class="body">
-                  <section class="byline">
-                    posted this
-                  </section>
-                </section>
-
-                <ul class="tags">
-                  <li><a href="http://thechangelog.com/tagged/github">#github</a></li><li><a href="http://thechangelog.com/tagged/javascript">#javascript</a></li><li><a href="http://thechangelog.com/tagged/html">#html</a></li>
-                </ul>
-
-              </article>
-
 </article>
 
 <article id="post-0" style="padding: 0px 50px">
+
 
 
 </article>

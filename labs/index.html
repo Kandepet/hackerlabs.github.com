@@ -227,15 +227,17 @@ cursor: pointer;
 }
 
 .sub {
-color: gray;
-       font-size: smaller;
+   color: gray;
+   font-size: smaller;
 }
+
 .sub a {
-color: inherit;
+   color: inherit;
+   float: right;
 }
 
 #updated .sub {
-display: inline;
+   display: inline;
 }
 
 .repo, .box {
@@ -317,15 +319,12 @@ position: relative;
   width: 940px;
 }
 
-
 </style>
-
-
 
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.0.2/bootstrap.min.js"></script>
-<script src="http://arquillian.org//javascripts/jquery-jgfeed.js"></script>
+<script src="/javascripts/jquery-jgfeed.js"></script>
 <script type="text/javascript">
 function byName(a, b) {
    var aName = a.name.toLowerCase();
@@ -343,7 +342,7 @@ function loadRepos(data, textStatus, jqXHR) {
    var container = $("#container");
    var row = null;
    var repositories = data.data;
-   repositories.sort(byName);
+   repositories.sort(byDate);
    cnt = 0;
    $.each(repositories, function(i, repo) {
          if (repo.name == 'arquillian_deprecated' || repo.name == 'seam-forge' || repo.name == 'arquillian-sandbox') {
@@ -362,14 +361,14 @@ function loadRepos(data, textStatus, jqXHR) {
    }
    $("#repositories").text(plural(repositories.length, " repository", " repositories"));
    repositories.sort(byDate);
-   var updated = $("#updated");
+   /*var updated = $("#updated");
    $.each(repositories.slice(0, 4), function(i, repo) {
          var div = $("<div style=\"line-height:1em;\" />");
          $("<a/>").attr({href: repo.html_url, title: "View project on GitHub"}).text(repo.name).appendTo(div);
          div.append(" ");
          repoInfo(repo).appendTo(div);
          div.appendTo(updated);
-         });
+         });*/
 }
 
 function date(text) {
@@ -393,13 +392,23 @@ function ellipsify(desc, max) {
 
 function repoInfo(repo) {
    var sub = $("<div class='sub'/>");
-   $("<a/>").attr({href: repo.html_url+"/issues", title: "Issue tracker"}).text(plural(repo.open_issues," issue")).appendTo(sub);
+   //$("<a class=\"mini-icon mini-icon-public-fork\"/>").attr({href: repo.html_url+"/network", title: "Fork list"}).text(plural(repo.forks, " fork")).appendTo(sub);
+   $("<a class=\"mini-icon mini-icon-public-fork\"/>").attr({href: repo.html_url+"/network", title: "Fork list"}).text(repo.forks + " ").appendTo(sub);
    sub.append("  ");
-   $("<a class=\"mini-icon mini-icon-watchers\"/>").attr({href: repo.html_url+"/watchers", title: "View watchers"}).text(plural(repo.watchers, " watcher")).appendTo(sub);
+
+   //$("<a class=\"mini-icon mini-icon-watchers\"/>").attr({href: repo.html_url+"/watchers", title: "View watchers"}).text(plural(repo.watchers, " watcher")).appendTo(sub);
+   $("<a class=\"mini-icon mini-icon-watchers\"/>").attr({href: repo.html_url+"/watchers", title: "View watchers"}).text(repo.watchers + " ").appendTo(sub);
    sub.append("  ");
-   $("<a class=\"mini-icon mini-icon-public-fork\"/>").attr({href: repo.html_url+"/network", title: "Fork list"}).text(plural(repo.forks, " fork")).appendTo(sub);
+
+   //$("<a class=\"mini-icon mini-icon-issues-open\"/>").attr({href: repo.html_url+"/issues", title: "Issue tracker"}).text(plural(repo.open_issues," issue")).appendTo(sub);
+   $("<a class=\"mini-icon mini-icon-issues-open\"/>").attr({href: repo.html_url+"/issues", title: "Issue tracker"}).text(repo.open_issues + " ").appendTo(sub);
    sub.append("  ");
-   $("<a/>").attr({href: repo.html_url+"/commits", title: "Last commit"}).text(date(repo.updated_at)).appendTo(sub);
+
+   $("<a class=\"mini-icon mini-icon-language\"/>").attr({href: repo.html_url, title: "View repo"}).text(repo.language + " ").appendTo(sub);
+   //sub.append("  ");
+   //$("<a/>").attr({href: repo.html_url+"/commits", title: "Last commit"}).text(date(repo.updated_at)).appendTo(sub);
+   //sub.append("<br\>");
+   //$("<a class=\"mini-icon mini-icon-watchers\"/>").attr({href: repo.html_url, title: "View repo"}).text("Languages: " + repo.language).appendTo(sub);
    return sub;
 }
 
@@ -412,9 +421,9 @@ function addRepo(container, repo) {
 
    repoInfo(repo).appendTo(div);
 
-   var fork = $("<a/>").attr({href: repo.html_url+"/fork_select", title: "Fork on GitHub", style: 'line-height: 2em;'}).appendTo(div);
-   fork.append("Fork ");
-   $("<i class='icon-share-alt'></i>").appendTo(fork);
+   //var fork = $("<a/>").attr({href: repo.html_url+"/fork_select", title: "Fork on GitHub", style: 'line-height: 2em;'}).appendTo(div);
+   //fork.append("Fork ");
+   //$("<i class='icon-share-alt'></i>").appendTo(fork);
 
    //var build_status = $("<div/>").addClass('status').appendTo(div);
    //var build_status_img = $("<img/>").attr(buildStatusByName(repo.name)).appendTo(build_status);

@@ -1,0 +1,37 @@
+
+#jstwitter {
+   width: 100%;
+   font-family: Lora;
+   font-size: 15px;
+   color: #333333;
+   padding: 10px;
+   margin:0 auto;
+}
+
+#jstwitter .tweet {
+   width: 350px;
+   margin:5px;
+   padding: 5px;
+   float:left;
+   border-bottom: 1px solid #dedede;
+   border-right: 0px solid #dedede;
+   /*background:#f1f1f1;
+   border:3px solid #ddd;*/
+}
+
+#jstwitter .tweet a {
+   text-decoration: none;
+   border-bottom: 0px solid #dedede;
+   color: #0184CA;
+}
+
+#jstwitter .tweet a:hover {
+   text-decoration: none;
+}
+
+#jstwitter .tweet .time {
+   font-size: 10px;
+   font-style: italic;
+   color: #666666;
+}
+

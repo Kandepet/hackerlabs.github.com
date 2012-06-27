@@ -1,0 +1,34 @@
+<div class="entry-content">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type='text/javascript' src='https://raw.github.com/swiftype/swiftype-search-jquery/master/jquery.ba-hashchange.min.js'></script>
+<script type="text/javascript" src="https://raw.github.com/swiftype/swiftype-search-jquery/master/jquery.swiftype.search.js"></script>
+<div class="search-container">
+    <form> <input type="text" id="st-search-input" value="search" class="st-search-input" /> </form>
+    <br/>
+    <br/>
+    <div id="st-results-container"></div>
+</div>
+
+<script type="text/javascript">
+var a;
+//jQuery("#st-search-input").val("Enter search term");
+var customRenderFunction = function (document_type, item) {
+  //alert(document_type);
+  //alert(item.toSource());
+  return '<div class="st-result"><h3 class="title"><a href="' + item['url'] + '" class="st-search-result-link">' + item['title'] + '</a></h3><p>' + item['highlight'].body + '</p><a href="' + item['url'] + '">' + item['url'] + '</a></div>';
+};
+
+jQuery('#st-search-input').swiftypeSearch({
+  renderFunction: customRenderFunction,
+  fetchFields: {'posts' : ['title','link','body', 'published_on']},
+  resultContainingElement: '#st-results-container',
+  engineKey: 'yp4imGCcpVF6mqypDhYH',
+});
+</script>
+
+{% if site.pagetitle %}
+<h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+{% endif %}
+
+    {{ content }}
+</div>

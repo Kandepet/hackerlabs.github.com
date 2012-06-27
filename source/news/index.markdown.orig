@@ -1,0 +1,129 @@
+---
+layout: page
+title: "news"
+date: 2012-06-12 00:25
+comments: true
+sharing: true
+footer: true
+---
+<div class="bg">
+<div id="container">
+
+<header id="newsmenu">
+<nav>
+<ul>
+<li><a href="#" class="current">Home</a></li>
+<li><a href="#">About us</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">News</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="intro">
+<hgroup>
+<h1>NEWS AND ARTICLES</h1>
+<p>These are a collection of interesting links and articles that I come across, usually from hacker news. I tweet these <a href="http://twitter.com/hackerlabs">@hackerlabs</a> with either #article or #link. What you see below is a dynamic aggregation of those tweets.</p>
+</hgroup>
+</section>
+
+<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script language="javascript" src="/javascripts/jquery.tweet.js" type="text/javascript"></script>
+<link href="/stylesheets/jquery.tweet.css" media="all" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript">
+     jQuery(function($){
+        var options = {
+          //query: "from:seaofclouds",
+          //query: "from:yahoo",
+          query: "from:reconnect_Job #PHP",
+          page: 1,
+          fetch: 20,
+          avatar_size: 32,
+          count: 10,
+          loading_text: "loading ...",
+          template: "{text}{join}{time}"
+        };
+
+        var widget = $("#paging .widget"),
+          next = $("#paging .next"),
+          prev = $("#paging .prev");
+
+        var enable = function(el, yes) {
+          yes ? $(el).removeAttr('disabled') :
+                $(el).attr('disabled', true);
+        };
+
+        var stepClick = function(incr) {
+          return function() {
+            options.page = options.page + incr;
+            enable(this, false);
+            widget.tweet(options);
+          };
+        };
+
+        next.bind("checkstate", function() {
+          enable(this, widget.find("li").length == options.count)
+        }).click(stepClick(1));
+
+        prev.bind("checkstate", function() {
+          enable(this, options.page > 1)
+        }).click(stepClick(-1));
+
+        widget.tweet(options).bind("loaded", function() { next.add(prev).trigger("checkstate"); }).bind("loaded",function(){$(this).find("a").attr("target","_blank");});
+      });
+
+</script>
+
+<div id="paging">
+      <div class="widget query"><p class="loading">loading ...</p></div>
+      <div class="controls">
+        <button class="prev" type="button" disabled="">&larr;</button>
+        <span class="pagenum"></span>
+        <button class="next" type="button" disabled="">&rarr;</button>
+<div style="clear:both"></div>
+      </div>
+</div>
+
+<div class="holder_content">
+<section class="group1">
+<h3>About us</h3>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin.
+Vestibulum condimentum  facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy.</p>
+<a class="photo_hover3" href="#"><img src="http://freehtml5templates.com/downloads/free/minimalism/images/picture1.jpg" width="240" height="214" alt="picture1"/></a>
+<a class="continue">Read More</a>
+</section>
+<section class="group2">
+<h3>Services</h3>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin.
+Vestibulum condimentum  facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy.</p>
+<a class="photo_hover3" href="#"><img src="http://freehtml5templates.com/downloads/free/minimalism/images/picture2.jpg" width="240" height="214" alt="picture1"/></a>
+<a class="continue">Read More</a>
+</section>
+<section class="group2">
+<h3>Latest news</h3>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin.
+Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy.   </p>
+<a class="photo_hover3" href="#"><img src="http://freehtml5templates.com/downloads/free/minimalism/images/picture3.jpg" width="240" height="214" alt="picture1"/></a>
+<a class="continue">Read More</a>
+</section>
+</div>
+
+<div class="holder_content">
+<section class="group4">
+<h3>Latest article</h3>
+<article>
+<h4>22.08.2011  - Design to express </h4>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst.</p>
+</article>
+</section>
+</div>
+</div>
+</div>
+
+
+

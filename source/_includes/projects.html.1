@@ -1,0 +1,160 @@
+<style>
+
+img {
+    height: 200px;
+    width: 200px;
+    /*border-radius*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.container {
+    display: block;
+    /*width: 660px;*/
+    height: 240px;
+    margin: 30px auto;
+}
+.scene3D {
+    display: block;
+    float: left;
+    margin: 10px;
+    /*border-radius*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    /*perspective*/
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+    -ms-perspective: 500px;
+    -o-perspective: 500px;
+    perspective: 500px;
+    height: 250px;
+}
+.flip div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    /*border-radius*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    /*backface-visibility*/
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flip div:first-child {
+    /*border-radius*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #333;
+    /*transform*/
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.flip div:first-child p {
+    color: #FFF;
+    text-shadow: 0 0 1px .111;
+    padding-top: 50px;
+    text-align: center;
+}
+.flip {
+    width: 200px;
+    height: 200px;
+    /*border-radius*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    /*box-shadow*/
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    /*transform*/
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    /*transition*/
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    /*transform-style*/
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.scene3D:hover .flip {
+    /*transform*/
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+</style>
+
+
+
+
+
+<div class="container">
+   <div class="scene3D">
+      <div class="flip">
+         <div>
+            <p>
+               Apple 1st Logo
+            </p>
+         </div>
+         <div>
+            <a href="http://www.apple.com"><img src="http://lab.web-gate.fr/images/apple/apple_1.png"/></a>
+         </div>
+      </div>
+   </div>
+   <div class="scene3D">
+      <div class="flip">
+         <div>
+            <p>
+               Apple 2nd Logo
+            </p>
+         </div>
+         <div>
+            <img src="http://lab.web-gate.fr/images/apple/apple_2.png"/>
+         </div>
+      </div>
+   </div>
+   <div class="scene3D">
+      <div class="flip">
+         <div>
+            <p>
+               Apple 3rd Logo
+            </p>
+         </div>
+         <div>
+            <img src="http://lab.web-gate.fr/images/apple/apple_3.png"/>
+         </div>
+      </div>
+   </div>
+   <div class="scene3D">
+      <div class="flip">
+         <div>
+            <p>
+               Real apple...
+            </p>
+         </div>
+         <div>
+            <img src="http://lab.web-gate.fr/images/apple/apple_6.png"/>
+         </div>
+      </div>
+   </div>
+</div>

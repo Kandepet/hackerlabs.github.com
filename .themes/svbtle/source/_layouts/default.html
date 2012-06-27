@@ -1,0 +1,15 @@
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+{% include head.html %}
+    <body class="home page page-id-102 page-template page-template-front-page-template-php">
+    
+    <div id="wrap">
+        
+        <header role="banner">{% include header.html %} </header>
+        <section id="content" role="main">
+        <article id="post-47" class="post-47 post type-post status-publish format-standard hentry category-digital-self category-entropy category-information">
+            {{ content | expand_urls: root_url }}
+        </article><!-- #post-## -->
+        </section><!-- #main -->
+    </div><!-- #wrap -->
+</body>
+</html>

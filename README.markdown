@@ -1,4 +1,6 @@
 ## Cloning hackerlabs & using the svbtle theme it uses
+DISCLAIMER: The theme is heavily hacked to make it work for me. It might not work the way you expect it to. Clone only if you know what you are doing.
+
 
 ### Installing RVM
 

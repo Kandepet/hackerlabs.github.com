@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: page_withcomments
+type: blog
 title: "About Deepak Kandepet & Hacker Labs"
 date: 2012-05-07 23:10
 comments: true

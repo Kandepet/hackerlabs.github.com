@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Internals | Hacker Labs]]></title>
   <link href="http://HackerLabs.github.com/blog/categories/internals/atom.xml" rel="self"/>
   <link href="http://HackerLabs.github.com/"/>
-  <updated>2012-06-27T18:28:40+00:00</updated>
+  <updated>2012-07-24T17:31:07-07:00</updated>
   <id>http://HackerLabs.github.com/</id>
   <author>
     <name><![CDATA[Deepak Kandepet]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[From bits to waves - The inner workings of an ethernet controller]]></title>
     <link href="http://HackerLabs.github.com/blog/2012/05/09/from-bits-to-waves-the-inner-workings-of-an-ethernet-controller/"/>
-    <updated>2012-05-09T06:57:00+00:00</updated>
+    <updated>2012-05-09T06:57:00-07:00</updated>
     <id>http://HackerLabs.github.com/blog/2012/05/09/from-bits-to-waves-the-inner-workings-of-an-ethernet-controller</id>
     <content type="html"><![CDATA[<p>About 10 years ago, I started hacking the Linux kernel. My interest was the TCP/IP stack and specifically the workings
 of an Ethernet controller and its Linux driver. I picked one of the most widely used Ethernet controllers at that time,
@@ -1345,7 +1345,7 @@ target="_blank">eepro100.c Linux Device Driver</a></li>
   <entry>
     <title type="html"><![CDATA[Hacking Lucene - The Index format]]></title>
     <link href="http://HackerLabs.github.com/blog/2011/10/01/hacking-lucene-the-index-format/"/>
-    <updated>2011-10-01T00:20:54+00:00</updated>
+    <updated>2011-10-01T00:20:54-07:00</updated>
     <id>http://HackerLabs.github.com/blog/2011/10/01/hacking-lucene-the-index-format</id>
     <content type="html"><![CDATA[<p>Lucene is high-performance, scalable, full-featured, open-source text search engine written in Java. Since I am a search engineer by profession, I wanted to learn more about Lucene and its internals.</p>
 

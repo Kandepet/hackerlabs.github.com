@@ -156,7 +156,7 @@ h6 { font-family: 'Arvo', arial, serif; }
 
 
 
-<span class="entry-date"  datetime="2012-06-12T00:25:00+00:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</span>
+<span class="entry-date"  datetime="2012-06-12T00:25:00-07:00" pubdate data-updated="true">Jun 12<span>th</span>, 2012</span>
     
 </div>
  -->

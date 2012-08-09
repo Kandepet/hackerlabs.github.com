@@ -26,11 +26,11 @@ jQuery('#st-search-input').swiftypeSearch({
 
 {% endcomment %}
 
-<article style="border-left: 10px solid #C0143C; padding: 3em 50px">
+<article style="border-left: 0px solid #C0143C; padding: 3em 50px">
     <div class="search alignright">
         <a class="search" href="/search/" title="search">Search</a>
     </div>
-<h2> Welcome to {{site.title}}.  </h2>
+<h3> Welcome to {{site.title}}.  </h3>
 <p>{{site.description}} <p>
 
 <a class="continue" href="/about/">More →</a>
@@ -46,15 +46,14 @@ jQuery('#st-search-input').swiftypeSearch({
 {% include github.html %}
 </article>
 
-<article id="post-0" style="padding: 0px 50px">
-<h2>BLOG POSTS</h2>
-</article>
+<article id="post-list" style="padding: 0px 0px 0px 0px">
+<h3 style="padding: 0px 50px">ARTICLES</h3>
 
 <frontpage-list id="post-0" style="padding: 0px 50px">
 <ul class="frontpage-blog-list">
    {% for post in site.posts %}
       {% if post.type == 'blog' %}
-         <a href="{{post.url}}" rel="post" title="{{post.title}}" class="frontpage-blog-link" ><li class="Default-category {% for cat in post.categories %} {{cat}}-category {% endfor %}"><span class="frontpage-date">{{post.date | date: "%d/%b/%Y"}}</span>{{post.title}}</li> </a>
+      <a href="{{post.url}}" rel="post" title="Tags: {% for cat in post.categories %} {{cat}}, {% endfor %}" class="frontpage-blog-link" ><li class="Default-category {% for cat in post.categories %} {{cat}}-category {% endfor %}"><span class="frontpage-date">{{post.date | date: "%d/%b/%Y"}}</span>{{post.title}}</li> </a>
       {% endif %}
    {% endfor %}
 </ul>
@@ -62,5 +61,6 @@ jQuery('#st-search-input').swiftypeSearch({
 <br>
 </frontpage-list><!-- #post-0 -->
 
+</article>
 
 

@@ -9,6 +9,292 @@ footer: true
 
 <div class="git-container" align="left">
 <style>
+.container{
+   position:relative;
+}
+.main {
+   margin-bottom: 20px;
+}
+.clr{
+   clear: both;
+}
+
+.more{
+   position:relative;
+   clear:both;
+   font-family:'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 5px 0px 10px;
+    width: 540px;
+    margin: 0 auto;
+}
+.more ul{
+   display:block;
+   text-align:center;
+    height: 30px;
+}
+.more ul li{
+   display: block;
+    padding: 4px 2px;
+    float:left;
+}
+.more ul li.selected a,
+.more ul li.selected a:hover{
+   background:#b2891b;
+   color:#fff;
+   text-shadow:none;
+}
+.more ul li a{
+   color:#555;
+    float:left;
+   background:#fff;
+    width:40px;
+   padding: 2px 5px;
+   -moz-box-shadow:1px 1px 2px #aaa;
+   -webkit-box-shadow:1px 1px 2px #aaa;
+   box-shadow:1px 1px 2px #aaa;
+}
+.more ul li a:hover{
+   background:#000;
+   color:#fff;
+}
+
+/* Now create final effects */
+
+.view {
+   width: 300px;
+   height: 200px;
+   margin: 10px 10px 30px 10px;
+   float: left;
+   border: 10px solid #fff;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   -webkit-box-shadow: 1px 1px 2px #e6e6e6;
+   -moz-box-shadow: 1px 1px 2px #e6e6e6;
+   box-shadow: 1px 1px 2px #e6e6e6;
+   cursor: default;
+   box-shadow:0 5px 10px #666;
+}
+.view .mask,.view .content {
+   width: 300px;
+   height: 200px;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+.view img {
+   display: block;
+   position: relative;
+}
+.view h2 {
+   text-transform: uppercase;
+   color: #fff;
+   text-align: center;
+   position: relative;
+   font-size: 17px;
+   padding: 10px;
+   background: rgba(0, 0, 0, 0.8);
+   margin: 0px 0 0 0;
+}
+.view p {
+   font-family: "Lora", Georgia, serif;
+   font-style: italic;
+   font-size: 12px;
+   position: relative;
+   color: #fff;
+   padding: 10px 20px 20px;
+   text-align: center;
+}
+.view a.info {
+   display: inline-block;
+   text-decoration: none;
+   padding: 7px 14px;
+   background: #000;
+   color: #fff;
+   text-transform: uppercase;
+   -webkit-box-shadow: 0 0 1px #000;
+   -moz-box-shadow: 0 0 1px #000;
+   box-shadow: 0 0 1px #000;
+}
+.view a.info: hover {
+   -webkit-box-shadow: 0 0 5px #000;
+   -moz-box-shadow: 0 0 5px #000;
+   box-shadow: 0 0 5px #000;
+}
+/* and When hover */
+.view-third img {
+   -webkit-transition: all 0.2s ease-in;
+   -moz-transition: all 0.2s ease-in;
+   -o-transition: all 0.2s ease-in;
+   -ms-transition: all 0.2s ease-in;
+   transition: all 0.2s ease-in;
+}
+.view-third .mask {
+   background-color: rgba(0,0,0,0.6);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transform: translate(460px, -100px) rotate(180deg);
+   -moz-transform: translate(460px, -100px) rotate(180deg);
+   -o-transform: translate(460px, -100px) rotate(180deg);
+   -ms-transform: translate(460px, -100px) rotate(180deg);
+   transform: translate(460px, -100px) rotate(180deg);
+   -webkit-transition: all 0.2s 0.4s ease-in-out;
+   -moz-transition: all 0.2s 0.4s ease-in-out;
+   -o-transition: all 0.2s 0.4s ease-in-out;
+   -ms-transition: all 0.2s 0.4s ease-in-out;
+   transition: all 0.2s 0.4s ease-in-out;
+}
+.view-third h2 {
+   -webkit-transform: translateY(-100px);
+   -moz-transform: translateY(-100px);
+   -o-transform: translateY(-100px);
+   -ms-transform: translateY(-100px);
+   transform: translateY(-100px);
+   -webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+.view-third p {
+   -webkit-transform: translateX(300px) rotate(90deg);
+   -moz-transform: translateX(300px) rotate(90deg);
+   -o-transform: translateX(300px) rotate(90deg);
+   -ms-transform: translateX(300px) rotate(90deg);
+   transform: translateX(300px) rotate(90deg);
+   -webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+.view-third a.info {
+   -webkit-transform: translateY(-200px);
+   -moz-transform: translateY(-200px);
+   -o-transform: translateY(-200px);
+   -ms-transform: translateY(-200px);
+   transform: translateY(-200px);
+   -webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+.view-third:hover .mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+   -webkit-transition-delay: 0s;
+   -moz-transition-delay: 0s;
+   -o-transition-delay: 0s;
+   -ms-transition-delay: 0s;
+   transition-delay: 0s;
+   -webkit-transform: translate(0px, 0px);
+   -moz-transform: translate(0px, 0px);
+   -o-transform: translate(0px, 0px);
+   -ms-transform: translate(0px, 0px);
+   transform: translate(0px, 0px);
+}
+.view-third:hover h2 {
+   -webkit-transform: translateY(0px);
+   -moz-transform: translateY(0px);
+   -o-transform: translateY(0px);
+   -ms-transform: translateY(0px);
+   transform: translateY(0px);
+   -webkit-transition-delay: 0.2s;
+   -moz-transition-delay: 0.2s;
+   -o-transition-delay: 0.2s;
+   -ms-transition-delay: 0.2s;
+   transition-delay: 0.2s;
+}
+.view-third:hover p {
+   -webkit-transform: translateX(0px) rotate(0deg);
+   -moz-transform: translateX(0px) rotate(0deg);
+   -o-transform: translateX(0px) rotate(0deg);
+   -ms-transform: translateX(0px) rotate(0deg);
+   transform: translateX(0px) rotate(0deg);
+   -webkit-transition-delay: 0.2s;
+   -moz-transition-delay: 0.2s;
+   -o-transition-delay: 0.2s;
+   -ms-transition-delay: 0.2s;
+   transition-delay: 0.2s;
+}
+.view-third:hover a.info {
+   -webkit-transform: translateY(0px);
+   -moz-transform: translateY(0px);
+   -o-transform: translateY(0px);
+   -ms-transform: translateY(0px);
+   transform: translateY(0px);
+   -webkit-transition-delay: 0.1s;
+   -moz-transition-delay: 0.1s;
+   -o-transition-delay: 0.1s;
+   -ms-transition-delay: 0.1s;
+   transition-delay: 0.1s;
+}
+
+
+#github-entry{padding:10px 10px 20px 122px;position:relative;clear:both;min-height:250px;margin-bottom:2em}
+#github-entry p,#github-entry pre{margin-bottom:1.5em}
+#github-entry .body li{list-style:square;margin-left:1em}
+span.timestamp{font-size:0.8em;color:#999;font-style:italic}
+#impact div.episode h3,#impact div.episode p.description{display:block;text-shadow:none}
+#impact div.episode h3 strong,#impact div.episode p.description strong{display:none}
+#impact div.episode object{float:left;margin-right:1em}
+#impact div.episode p.download a{display:block;height:50px;width:250px;background:url(http://static.thechangelog.com/images/buttons/download.png);text-indent:-9999px;overflow:hidden}
+#impact a.goto-episode{display:block;height:50px;width:250px;background:url(http://static.thechangelog.com/images/buttons/goto-episode.png);text-indent:-9999px;overflow:hidden}
+html.ipad object,html.iphone object{display:none}
+.meta{width:112px;position:absolute;top:10px;left:20px;color:#999;font-size:0.9em}
+.meta a.icon{display:block;height:48px;width:48px;overflow:hidden;text-indent:-9999px;background:url(http://static.thechangelog.com/images/helveticons/48x48/Rate%2048x48.png) center center no-repeat}
+section.date{color:#888;text-transform:uppercase;margin:1em;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#ddd}
+#github-entry.audio .meta a.icon{background-image:url(http://static.thechangelog.com/images/helveticons/48x48/Headphones%2048x48.png)}
+#github-entry.video .meta a.icon{background-image:url(http://static.thechangelog.com/images/helveticons/48x48/Movie%20alt%2048x48.png)}
+#github-entry.link .meta a.icon{background-image:url(http://static.thechangelog.com/images/helveticons/48x48/Link%2048x48.png)}
+#github-entry.link.episode .meta a.icon{background-image:url(http://static.thechangelog.com/images/helveticons/48x48/Headphones%2048x48.png)}
+#github-entry.github .meta a.icon{background-image:url(http://static.thechangelog.com/images/helveticons/48x48/Cloud%20upload%2048x48.png)}
+.byline{display:block;margin-bottom:1.5em;color:#888}
+.byline a{color:#888;text-shadow:-1px 1px 0px rgba(255,255,255,0.25);font-style:normal;border:none}
+.meta ul{margin-top:0;padding-top:0}
+.meta ul li{width:42px;clear:both}
+.meta ul li.topsy{width:80px;display:block;height:20px;clear:both}
+.meta a{color:#666}
+.meta a.notes,.meta a.forks,.meta a.watchers{width:40px;height:20px;padding-right:20px;display:block;border:none;color:#111;text-align:right;line-height:20px;margin-left:-20px}
+.meta a.forks{background:url(http://static.thechangelog.com/images/helveticons/16x16/Shuffle%2016x16.png) right top no-repeat}
+.meta a.watchers{background:url(http://static.thechangelog.com/images/helveticons/16x16/Eye%2016x16.png) right top no-repeat}
+.meta a.notes{background:url(http://static.thechangelog.com/images/helveticons/16x16/Favorite%2016x16.png) right top no-repeat}
+.meta a.topsy-sm-total{border:none !important}
+.meta a.topsy-sm-badge{display:block;margin-top:1em !important}
+a.author{line-height:30px;display:inline-block;text-decoration:none}
+a.author img{padding:2px;background:#fff;border:solid 1px #d1d1d1;overflow:auto;vertical-align:middle}
+ul.tags{margin:0;padding:0}
+ul.tags li{display:inline;margin-right:5px}
+ul.tags li a{color:#888;border:none;font-weight:normal;text-transform:lowercase}
+pre{background:#111;color:#f0f0f0;width:556px;padding:10px;overflow:auto;line-height:1.1em;clear:both}
+code{font-family:"Menlo","Monaco","Consolas","Bitstream Vera Sans Mono","Courier New",Courier,monospace !important;font-size:0.9em}
+pre code a{color:#fff;font-weight:normal;border:none}
+pre code a:hover{border:inherit;color:#fff}
+input.prompted{color:#888}
+#sidebar{padding-top:2em}
+#sidebar h3{font-size:1.3em;color:#aaa}
+ul.crew li a{display:block;text-align:right;line-height:30px;text-decoration:none;border:none;color:#333}
+ul.crew li a img{vertical-align:middle;padding:2px;background:#fff;border:solid 1px #aaa}
+h2{font-weight:normal;color:#666;margin-bottom:1em}
+h2 span.tag{font-weight:bold}
+body.tag-episode .date{display:none}
+body.tag-episode #github-entry.episode{padding:10px;margin:0;min-height:inherit}
+body.tag-episode #github-entry.episode h3{font-size:1.1em;border-bottom:solid 1px #ddd;padding-bottom:1em}
+body.tag-episode #github-entry.episode h3 a{font-weight:normal}
+body.tag-episode #github-entry.episode .meta,body.tag-episode #github-entry.episode .body,body.tag-episode #github-entry.episode ul.tags{display:none}
+blockquote{margin:1em 1em 1em 2em;border-left:solid 1px #aaa;padding-left:1em;font-style:italic}
+#fusion_ad a{font-weight:normal;font-size:11px;display:block;line-height:15px;margin-bottom:1em;}
+.powered-by-fusion{font-style:italic;}
+
+</style>
+
+<style>
 
 .git-container {
    text-align: left;
@@ -165,6 +451,41 @@ position: relative;
 }
 
 </style>
+
+<div class='page-header'>
+<h1>Startup & stealth projects</h1>
+<p class="lead">
+A list of my startups and ongoing stealth projects.
+</p>
+</div>
+            <div class="main">
+                <div class="view view-third">
+                    <img src="/images/SameFeatherLogo.jpg" style="top: 40px;left: 10px;"/>
+                    <div class="mask">
+                        <h2>Same Feather</h2>
+                        <p>A local social network. Find and connect with people who share your interests in your neighborhood.</p>
+                        <a href="http://samefeather.com" class="info">Read More</a>
+                    </div>
+                </div>
+               <div class="view view-third">
+                    <img src="/images/TrendWarsLogo.png" style="width:100%;height:100%;top:30px;left:35px"/>
+                    <div class="mask">
+                        <h2>Trend Wars</h2>
+                        <p>A game based on real-time twitter trending topics. Players recruit others and persuade them to tweet on their topic to win the game</p>
+                        <a href="http://trendwars.com" class="info">Read More</a>
+                    </div>
+                </div>
+                <div class="view view-third">
+                    <img src="/images/PreplyIcon.jpg" style="width:100%;height:100%" />
+                    <div class="mask">
+                        <h2>Preply</h2>
+                        <p>Coding interview preparation by practicing real interview questions. Timed mock interviews with realtime feedback of performance.</p>
+                        <a href="http://prep.ly" class="info">Read More</a>
+                    </div>
+                </div>
+             </div>
+             <div style="clear:both"></div>
+
 
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -338,7 +659,7 @@ $(function () {
 <div class='page-header'>
 <h1><a href="http://github.com/hackerlabs">github.com/hackerlabs</a> repositories</h1>
 <p class="lead">
-A list of hacks and projects on emerging innovations, technologies, and products from around the web.
+A list of my open source hacks and projects on github.
 </p>
 </div>
 
@@ -360,3 +681,8 @@ A list of hacks and projects on emerging innovations, technologies, and products
 </div>
  <div style="clear: both;">
 </div>
+
+
+<br/>
+<br/>
+<br/>

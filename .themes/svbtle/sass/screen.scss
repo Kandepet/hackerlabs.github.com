@@ -971,7 +971,6 @@ header .social a {
     border: 1px solid #EF7522; }
   &.contact {
     background-color: #90A935;
-    background-size: 15%;
     background: url("/images/icons/mail.png") no-repeat scroll center center #90A935;
     //background: url("http://cdn1.iconfinder.com/data/icons/opensourceicons/32/email.png") no-repeat scroll center center #90A935;
     //background-size:24px 24px;
@@ -1518,11 +1517,8 @@ div.st-result .st-date {
     border: 1px solid #EF7522; }
   &.contact {
     background-color: #90A935;
-    color: #fff;
-    border: 1px solid #90A935;
-    font-weight: bold;
-    font-size: 18px;
-    text-indent: 4px; }
+    background: url("/images/icons/mail.png") no-repeat scroll center center #90A935;
+    }
   &.search {
     /*background: url("http://justcramer.com/images/search.png?1335336011") no-repeat scroll center center #C0143C;*/
     background: url("http://findicons.com/files//icons/2170/kailoon/32/search.png") no-repeat scroll center center #C0143C;
@@ -2055,7 +2051,7 @@ div[class=span4]:before {
    }
 
    .header-logo {
-      bottom: 10px;
+      bottom: auto;
       left: 50%;
       position: fixed;
       width: 50%;
@@ -2076,11 +2072,14 @@ div[class=span4]:before {
       border-radius: 50% 50% 50% 50%;
       -webkit-border-radius: 70px !important;
       height: 120px;
-      right: 50%;
       position: absolute;
+      right: 50%;
+      left: auto;
       top: auto;
+      bottom: auto;
       width: 120px;
       margin: 0;
+      margin-right: 30px;
       display: block;
       a {
          border: medium none;
@@ -2126,11 +2125,11 @@ div[class=span4]:before {
 @media (min-width: 321px) and (max-width: 480px) {
 
    header {
-      border-top: 1px solid #e2e2e2;
+      border-bottom: 1px solid #e2e2e2;
       float: none;
       padding: 0em;
       padding-bottom: 1em;
-      position: fixed;
+      position: relative;
       color: #999;
       background-color: #fff;
       text-transform: uppercase;
@@ -2148,9 +2147,9 @@ div[class=span4]:before {
    }
 
    .header-logo {
-      bottom: 10px;
+      bottom: auto;
       left: 50%;
-      position: fixed;
+      position: relative;
       width: 50%;
       /*text-align: right;*/
       margin-right: 10px;
@@ -2172,8 +2171,10 @@ div[class=span4]:before {
       right: 50%;
       position: absolute;
       top: auto;
+      bottom: auto;
+      left: auto;
       width: 120px;
-      margin: 0;
+      margin: 0 30px 0 0;
       display: block;
       a {
          border: medium none;
@@ -2328,11 +2329,8 @@ div[class=span4]:before {
       border: 1px solid #EF7522; }
       &.contact {
          background-color: #90A935;
-         color: #fff;
-         border: 1px solid #90A935;
-         font-weight: bold;
-         font-size: 18px;
-      text-indent: 4px; }
+         background: url("/images/icons/mail.png") no-repeat scroll center center #90A935;
+      }
       &.search {
          background: url("/images/icons/search.png") no-repeat scroll center center #C0143C;
       border: 1px solid #C0143C; }

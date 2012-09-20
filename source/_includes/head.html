@@ -8,6 +8,8 @@
         <meta charset="UTF-8" />
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
   <meta name="author" content="{{ site.author }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
 
   {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
   <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">

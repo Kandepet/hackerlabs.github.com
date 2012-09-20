@@ -71,10 +71,13 @@ footer: true
    overflow: hidden;
    position: relative;
    text-align: center;
+   cursor: default;
+}
+
+.view:hover {
    -webkit-box-shadow: 1px 1px 2px #e6e6e6;
    -moz-box-shadow: 1px 1px 2px #e6e6e6;
    box-shadow: 1px 1px 2px #e6e6e6;
-   cursor: default;
    box-shadow:0 5px 10px #666;
 }
 .view .mask,.view .content {

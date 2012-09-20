@@ -971,13 +971,16 @@ header .social a {
     border: 1px solid #EF7522; }
   &.contact {
     background-color: #90A935;
+    background-size: 15%;
+    background: url("/images/icons/mail.png") no-repeat scroll center center #90A935;
     //background: url("http://cdn1.iconfinder.com/data/icons/opensourceicons/32/email.png") no-repeat scroll center center #90A935;
     //background-size:24px 24px;
-    color: #fff;
-    border: 1px solid #90A935;
-    font-weight: bold;
-    font-size: 18px;
-    text-indent: 4px; }
+    //color: #fff;
+    //border: 1px solid #90A935;
+    //font-weight: bold;
+    //font-size: 18px;
+    //text-indent: 4px;
+    }
   &.search {
     //background: url("http://justcramer.com/images/search.png?1335336011") no-repeat scroll center center #C0143C;
     background: url("/images/icons/search.png") no-repeat scroll center center #C0143C;
@@ -2028,3 +2031,325 @@ div[class=span4]:before {
    color: #009;
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+   header {
+      border-top: 1px solid #e2e2e2;
+      float: none;
+      padding: 0em;
+      padding-bottom: 1em;
+      position: fixed;
+      color: #999;
+      background-color: #fff;
+      text-transform: uppercase;
+      /*width: 100%;*/
+      height:120px;
+      top:auto;
+      right:0;
+      bottom:0;
+      left:0;
+      h1 a {
+         font: 300 26px / 36px "Oswald", "Arvo", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+         font-size: 36px;
+         color: black;
+      }
+   }
+
+   .header-logo {
+      bottom: 10px;
+      left: 50%;
+      position: fixed;
+      width: 50%;
+      /*text-align: right;*/
+      margin-right: 10px;
+      p {
+         display: none;
+         color: #4D4D4D;
+         text-transform: none;
+         font-family: 'Cardo';
+         font-size: 16px;
+         font-weight: 400;
+      }
+   }
+
+   figure#user_logo {
+      border: 5px solid #F8F8F8;
+      border-radius: 50% 50% 50% 50%;
+      -webkit-border-radius: 70px !important;
+      height: 120px;
+      right: 50%;
+      position: absolute;
+      top: auto;
+      width: 120px;
+      margin: 0;
+      display: block;
+      a {
+         border: medium none;
+         display: block;
+         height: 120px;
+         position: absolute;
+         width: 120px;
+      }
+   }
+
+   figure#user_logo div.logo {
+      background-color: #88ACDB;
+      //background: url("http://mysterious.s3.amazonaws.com/bolt_large.png") no-repeat scroll center center black;
+      border: 2px solid #FFFFFF;
+      border-radius: 50% 50% 50% 50%;
+      height: 80px;
+      left: 50%;
+      margin-left: -42px;
+      margin-top: -42px;
+      position: absolute;
+      top: 50%;
+      width: 80px;
+      background-size: 100% auto;
+      background-color: #fff;
+      background-image: url("/images/HackerLabsQR-blue.png");
+   }
+
+
+   h1, h2, h3, h4, h5 {
+      font: 300 26px / 36px "Oswald", "Arvo", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 36px;
+      color: black;
+   }
+
+   #content {
+      margin: 0 0px;
+      min-height: 100%;
+      border-left: 0px solid #e2e2e2;
+   }
+
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+
+   header {
+      border-top: 1px solid #e2e2e2;
+      float: none;
+      padding: 0em;
+      padding-bottom: 1em;
+      position: fixed;
+      color: #999;
+      background-color: #fff;
+      text-transform: uppercase;
+      /*width: 100%;*/
+      height:120px;
+      top:auto;
+      right:0;
+      bottom:0;
+      left:0;
+      h1 a {
+         font: 300 26px / 36px "Oswald", "Arvo", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+         font-size: 36px;
+         color: black;
+      }
+   }
+
+   .header-logo {
+      bottom: 10px;
+      left: 50%;
+      position: fixed;
+      width: 50%;
+      /*text-align: right;*/
+      margin-right: 10px;
+      p {
+         display: none;
+         color: #4D4D4D;
+         text-transform: none;
+         font-family: 'Cardo';
+         font-size: 16px;
+         font-weight: 400;
+      }
+   }
+
+   figure#user_logo {
+      border: 5px solid #F8F8F8;
+      border-radius: 50% 50% 50% 50%;
+      -webkit-border-radius: 70px !important;
+      height: 120px;
+      right: 50%;
+      position: absolute;
+      top: auto;
+      width: 120px;
+      margin: 0;
+      display: block;
+      a {
+         border: medium none;
+         display: block;
+         height: 120px;
+         position: absolute;
+         width: 120px;
+      }
+   }
+
+   figure#user_logo div.logo {
+      background-color: #88ACDB;
+      //background: url("http://mysterious.s3.amazonaws.com/bolt_large.png") no-repeat scroll center center black;
+      border: 2px solid #FFFFFF;
+      border-radius: 50% 50% 50% 50%;
+      height: 80px;
+      left: 50%;
+      margin-left: -42px;
+      margin-top: -42px;
+      position: absolute;
+      top: 50%;
+      width: 80px;
+      background-size: 100% auto;
+      background-color: #fff;
+      background-image: url("/images/HackerLabsQR-blue.png");
+   }
+
+
+   h1, h2, h3, h4, h5 {
+      font: 300 26px / 36px "Oswald", "Arvo", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 36px;
+      color: black;
+   }
+
+   #content {
+      margin: 0 0px;
+      min-height: 100%;
+      border-left: 0px solid #e2e2e2;
+   }
+
+}
+
+@media (max-width: 320px) {
+
+   header {
+      border-bottom: 1px solid #e2e2e2;
+      float: none;
+      padding: 0em;
+      padding-bottom: 1em;
+      position: relative;
+      color: #999;
+      background-color: #fff;
+      text-transform: uppercase;
+      /*width: 100%;*/
+      height:80px;
+      top:auto;
+      right:0;
+      bottom:0;
+      left:0;
+      h1 a {
+         font: 300 26px / 36px "Oswald", "Arvo", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+         font-size: 18px;
+         color: black;
+      }
+   }
+
+   .header-logo {
+      bottom: auto;
+      left: 50%;
+      position: relative;
+      width: 50%;
+      /*text-align: right;*/
+      margin-right: 10px;
+      p {
+         display: none;
+         color: #4D4D4D;
+         text-transform: none;
+         font-family: 'Cardo';
+         font-size: 16px;
+         font-weight: 400;
+      }
+   }
+
+   figure#user_logo {
+      border: 5px solid #F8F8F8;
+      border-radius: 50% 50% 50% 50%;
+      -webkit-border-radius: 70px !important;
+      height: 80px;
+      right: 50%;
+      position: absolute;
+      bottom: auto;
+      top: 0px;
+      width: 80px;
+      margin: 0;
+      display: block;
+      a {
+         border: medium none;
+         display: block;
+         height: 80px;
+         position: absolute;
+         width: 80px;
+      }
+   }
+
+   figure#user_logo div.logo {
+      background-color: #88ACDB;
+      //background: url("http://mysterious.s3.amazonaws.com/bolt_large.png") no-repeat scroll center center black;
+      border: 2px solid #FFFFFF;
+      border-radius: 50% 50% 50% 50%;
+      height: 60px;
+      left: 50%;
+      margin-left: -32px;
+      margin-top: -32px;
+      position: absolute;
+      top: 50%;
+      width: 60px;
+      background-size: 100% auto;
+      background-color: #fff;
+      background-image: url("/images/HackerLabsQR-blue.png");
+   }
+
+
+   h1, h2, h3, h4, h5 {
+      font: 150 8px / 10px "Oswald", "Arvo", "Cardo", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      color: black;
+   }
+
+   #content {
+      margin: 0 0px;
+      min-height: 100%;
+      border-left: 0px solid #e2e2e2;
+   }
+
+   header .social {
+      position: absolute;
+      top: 35px;
+   }
+
+   header .social a {
+      &.twitter {
+         background: url("/images/icons/twitter.png") no-repeat scroll center center #33CCFF;
+      border: 1px solid #33CCFF; }
+      &.github {
+         background: url("/images/icons/github.png") no-repeat scroll center center #3b3b3b;
+      border: 1px solid #3b3b3b; }
+      &.moreinfo {
+         background: url("/images/icons/info.png") no-repeat scroll center center #7A3E48;
+      border: 1px solid #7A3E48; }
+      &.rss {
+         background: url("/images/icons/rss.png") no-repeat scroll center center #ef7522;
+      border: 1px solid #EF7522; }
+      &.contact {
+         background-color: #90A935;
+         color: #fff;
+         border: 1px solid #90A935;
+         font-weight: bold;
+         font-size: 18px;
+      text-indent: 4px; }
+      &.search {
+         background: url("/images/icons/search.png") no-repeat scroll center center #C0143C;
+      border: 1px solid #C0143C; }
+      &:hover {
+      opacity: 1; }
+      -moz-box-orient: vertical;
+      -moz-transition: all 0.3s ease 0s;
+      border-radius: 50% 50% 50% 50%;
+      -webkit-border-radius: 70px !important;
+      display: inline-block;
+      height: 14px;
+      margin-right: 5px;
+      opacity: 0.8;
+      text-indent: -9999px;
+      vertical-align: middle;
+      width: 14px;
+   }
+
+
+}
